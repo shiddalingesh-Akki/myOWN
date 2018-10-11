@@ -1,0 +1,9 @@
+﻿import AP.Common.GDT as apCommonGDT;
+
+businessobject UpdateTicket {
+
+[AlternativeKey] element ID:ID;
+[Label ("Description")] element ZDesc:LANGUAGEINDEPENDENT_EXTENDED_Text;
+
+action UpdateTicket;
+}

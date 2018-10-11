@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.orica.com/Opportunity/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Opportunity" targetNamespace="http://www.orica.com/Opportunity/">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://www.orica.com/Opportunity/">
+			<xsd:element name="getAribaWSDetails">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Action" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="OpportunityID" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="OpportunityType" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="Name" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="Account" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="SalesUnit" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="Owner" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="Status" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="Stage" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="SalesTeam" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="BiddingAmount" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="EffectiveDate" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="ExpirationDate" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="Commodity_MaterialGroup" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="ContractId" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="TemplateId" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="Region" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="Description" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="ExpirationTermType" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="ProjectType" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="ParentAgreementId" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="OnBehalfUserPasswordAdapter" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="Domain" type="xsd:string" minOccurs="0" maxOccurs="1" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="AribaWSDetails">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="AribaWorkspace" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="AribaURL" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="Status" type="xsd:string" minOccurs="0" maxOccurs="1" />
+						<xsd:element name="ErrorMessage" type="xsd:string" minOccurs="0" maxOccurs="1" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="getAribaWSDetails">
+		<wsdl:part element="tns:getAribaWSDetails" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="AribaWSDetails">
+		<wsdl:part element="tns:AribaWSDetails" name="parameters"/>
+	</wsdl:message>
+	<wsdl:portType name="AribaWSDetailsPortType">
+		<wsdl:operation name="getAribaWSDetails">
+			<wsdl:input message="tns:getAribaWSDetails"/>
+			<wsdl:output message="tns:AribaWSDetails"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="AribaWSDetailsBinding" type="tns:AribaWSDetailsPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="getAribaWSDetails">
+			<soap:operation soapAction="http://www.orica.com/Opportunity/getAribaWSDetails"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="AribaWSDetailsService">
+		<wsdl:port binding="tns:AribaWSDetailsBinding" name="AribaWSDetailsPort">
+			<soap:address location="https://e0967-iflmap.hcisbt.us2.hana.ondemand.com/cxf/Ariba/getAribaWSDetails"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,67 @@
+﻿/*
+	Add your SAP Business ByDesign scripting language implementation for:
+		Business Object: ServiceRequest
+		Node: Root
+		Validation: OnSave 
+
+	Developer : Shiddalingesh.Akki
+	Functional Specs ID : E-1912
+	On save validation for mandatory fields
+		
+
+*/
+
+import ABSL;
+import AP.CRM.Global;
+import AP.Common.GDT as asCommonGDT;
+
+
+var IntThis = this;
+
+var RootCause;
+var RootCauseGroup;
+var OnSaveIndicator = true;
+
+var ServiceTerms1;
+if (IntThis.ServiceTerms.IsSet())
+	ServiceTerms1 = IntThis.ServiceTerms;
+
+
+var MainObjectPartServiceIssueCategory1;
+if (IntThis.MainObjectPartServiceIssueCategory.IsSet())
+	MainObjectPartServiceIssueCategory1 = IntThis.MainObjectPartServiceIssueCategory;
+
+var MainActivityServiceIssueCategory1;
+if (IntThis.MainActivityServiceIssueCategory.IsSet())
+	MainActivityServiceIssueCategory1 = IntThis.MainActivityServiceIssueCategory;
+
+
+//When Status is Closed Pending Feedback
+if (ServiceTerms1.ServiceRequestUserLifeCycleStatusCode == "Z8")
+{
+
+	if (IntThis.ApproximateHoursToComplete.IsInitial() || IntThis.ChangeManagementCompleted1.IsInitial() || IntThis.LearningShared.IsInitial() || (IntThis.LearningCaptured == false) || (IntThis.ProductFileUpdated == false))
+	{
+		raise Message_CaseClosureChecklist.Create("E");
+		OnSaveIndicator = false;
+	}
+
+
+	//Root Cause or Object Category ID
+	if (MainObjectPartServiceIssueCategory1.IsSet())
+		RootCause = MainObjectPartServiceIssueCategory1.ServiceIssueCategoryCatalogueCategoryKey.ServiceIssueCategoryID.content;
+
+	//Root Cause Group or Resolution Category ID
+	if (MainActivityServiceIssueCategory1.IsSet())
+		RootCauseGroup = MainActivityServiceIssueCategory1.ServiceIssueCategoryCatalogueCategoryKey.ServiceIssueCategoryID.content;
+
+
+	if (RootCause.IsInitial() || RootCauseGroup.IsInitial())
+	{
+		raise Message_RootCause.Create("E");
+		OnSaveIndicator = false;
+	}
+
+}
+
+return OnSaveIndicator;

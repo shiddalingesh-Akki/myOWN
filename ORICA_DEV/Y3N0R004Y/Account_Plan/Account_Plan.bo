@@ -1,0 +1,90 @@
+﻿import AP.Common.GDT as apCommonGDT;
+import AP.FO.BusinessPartner.Global;
+//import BASIS.Global as basisGlobal;
+
+
+[ChangeHistory] businessobject Account_Plan raises Message_All{
+
+message Message_All text "&1" : LANGUAGEINDEPENDENT_Text;
+
+[AlternativeKey] 
+[Label ("Account ID")]                  element ZAccountID:BusinessPartnerInternalID;
+[Label ("Approval Status")]             element ZApprovalStatus:ZApprovalStatusCode = "DRAFT";
+
+[Label ("Account Strategy")]            element ZAccountStrategy:Text;
+[Label ("Customer Strategy")]           element ZCustomerStrategy:Text;
+
+[DependentObject(TextCollection)] [MultipleTexts] [LanguageIndependent]      node ZTextCollection;
+
+//Key Objectives
+[ChangeHistory] node Objectives [0,n] 
+ {
+   [Label ("Objectives")]                element ZObjectives:LANGUAGEINDEPENDENT_ENCRYPTED_EXTENDED_Name;
+   [Label ("Owner")]                     element ZOwner:EmployeeID;
+   [Label ("Objective Target date")]     element ZObjectiveTargetDate: apCommonGDT: Date;
+  
+   [ChangeHistory] node Actions [0,n] 
+    {
+     [Label ("Key Actions")]             element ZKeyActions:LANGUAGEINDEPENDENT_ENCRYPTED_EXTENDED_Name;
+     [Label ("Action Due Date")]         element ZActionDueDate: apCommonGDT: Date;
+    }
+  }
+
+  //Site Parameters
+ [ChangeHistory] node SiteParameters [0,n] 
+ {
+   [Label ("Value Drivers")]         element ZValueDrivers:LANGUAGEINDEPENDENT_ENCRYPTED_EXTENDED_Name;
+   [Label ("Customer Needs")]        element ZCustomerNeeds:LANGUAGEINDEPENDENT_ENCRYPTED_EXTENDED_Name;
+  
+   [ChangeHistory] node KPI [0,n] 
+   {
+     [Label ("KPI 1")]               element ZKPI1:LANGUAGEINDEPENDENT_ENCRYPTED_EXTENDED_Name;
+     [Label ("KPI 2")]               element ZKPI2:LANGUAGEINDEPENDENT_ENCRYPTED_EXTENDED_Name;
+	 [Label ("KPI 3")]               element ZKPI3:LANGUAGEINDEPENDENT_ENCRYPTED_EXTENDED_Name;
+    }
+}
+
+ 
+//Current Budget
+[Label ("CrntBgt Total Sales")]                    element ZCrntBgt_Sales: Amount = {currencyCode = "AUD"};
+[Label ("CrntBgt Total Product Sales")]            element ZCrntBgt_ProductSales:Amount = {currencyCode = "AUD"};
+[Label ("CrntBgt Total Service Sales")]            element ZCrntBgt_ServiceSales:Amount = {currencyCode = "AUD"};
+[Label ("CrntBgt Total Packaged Sales")]           element ZCrntBgt_PackagedSales:Amount = {currencyCode = "AUD"};
+[Label ("CrntBgt Total Initiated System Sales")]   element ZCrntBgt_InitiatedSystemSales:Amount = {currencyCode = "AUD"};
+[Label ("CrntBgt Total Bulk Sales")]               element ZCrntBgt_BulkSales:Amount = {currencyCode = "AUD"};
+[Label ("CrntBgt Total Ground Support Sales")]     element ZCrntBgt_GroundSupportSales:Amount = {currencyCode = "AUD"};
+[Label ("CrntBgt Total Bulk Volume")]              element ZCrntBgt_BulkVolume:Amount = {currencyCode = "AUD"};
+
+//Current YTD
+[Label ("CrntYTD Total Sales")]                    element ZCrntYTD_Sales:Amount = {currencyCode = "AUD"};
+[Label ("CrntYTD Total Product Sales")]            element ZCrntYTD_ProductSales:Amount = {currencyCode = "AUD"};
+[Label ("CrntYTD Total Service Sales")]            element ZCrntYTD_ServiceSales:Amount = {currencyCode = "AUD"};
+[Label ("CrntYTD Total Packaged Sales")]           element ZCrntYTD_PackagedSales:Amount = {currencyCode = "AUD"};
+[Label ("CrntYTD Total Initiated System Sales")]   element ZCrntYTD_InitiatedSystemSales:Amount = {currencyCode = "AUD"};
+[Label ("CrntYTD Total Bulk Sales")]               element ZCrntYTD_BulkSales:Amount = {currencyCode = "AUD"};
+[Label ("CrntYTD Total Ground Support Sales")]     element ZCrntYTD_GroundSupportSales:Amount = {currencyCode = "AUD"};
+[Label ("CrntYTD Total Bulk Volume")]              element ZCrntYTD_BulkVolume:Amount = {currencyCode = "AUD"};
+
+//Previous YTD
+[Label ("PrvsYear Total Sales")]                   element ZPrvsYear_Sales:Amount = {currencyCode = "AUD"};
+[Label ("PrvsYear Total Product Sales")]           element ZPrvsYear_ProductSales:Amount = {currencyCode = "AUD"};
+[Label ("PrvsYear Total Service Sales")]           element ZPrvsYear_ServiceSales:Amount = {currencyCode = "AUD"};
+[Label ("PrvsYear Total Packaged Sales")]          element ZPrvsYear_PackagedSales:Amount = {currencyCode = "AUD"};
+[Label ("PrvsYear Total Initiated System Sales")]  element ZPrvsYear_InitiatedSystemSales:Amount = {currencyCode = "AUD"};
+[Label ("PrvsYear Total Bulk Sales")]              element ZPrvsYear_BulkSales:Amount = {currencyCode = "AUD"};
+[Label ("PrvsYear Total Ground Support Sales")]    element ZPrvsYear_GroundSupportSales:Amount = {currencyCode = "AUD"};
+[Label ("PrvsYear Total Bulk Volume")]             element ZPrvsYear_BulkVolume:Amount = {currencyCode = "AUD"};
+
+//Current Month Previous Year
+[Label ("CMPY Total Sales")]                       element ZCMPY_Sales:Amount = {currencyCode = "AUD"};
+[Label ("CMPY Total Product Sales")]               element ZCMPY_ProductSales:Amount = {currencyCode = "AUD"};
+[Label ("CMPY Total Service Sales")]               element ZCMPY_ServiceSales:Amount = {currencyCode = "AUD"};
+[Label ("CMPY Total Packaged Sales")]              element ZCMPY_PackagedSales:Amount = {currencyCode = "AUD"};
+[Label ("CMPY Total Initiated System Sales")]      element ZCMPY_InitiatedSystemSales:Amount = {currencyCode = "AUD"};
+[Label ("CMPY Total Bulk Sales")]                  element ZCMPY_BulkSales:Amount = {currencyCode = "AUD"};
+[Label ("CMPY Total Ground Support Sales")]        element ZCMPY_GroundSupportSales:Amount = {currencyCode = "AUD"};
+[Label ("CMPY Total Bulk Volume")]                 element ZCMPY_BulkVolume:Amount = {currencyCode = "AUD"};
+
+association ToCustomer to Customer;
+
+}

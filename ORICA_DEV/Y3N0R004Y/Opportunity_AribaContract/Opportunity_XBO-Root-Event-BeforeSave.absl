@@ -1,0 +1,231 @@
+﻿/*
+  	Developer : Shiddalingesh.Akki
+	Functional Specs ID : I-0080 , I-0076
+*/
+
+import ABSL;
+import AP.CRM.Global;
+import AP.PC.IdentityManagement.Global;
+
+
+var ProspectParty1;
+var SalesCycle1;
+var SalesForecast1;
+var MainEmpRespParty1; 
+
+var AribaContractRequest : AribaContractExtWebServ.getAribaWSDetails.Request;
+var AribaContractResponse : AribaContractExtWebServ.getAribaWSDetails.Response;
+
+if (this.ProspectParty.IsSet())
+	ProspectParty1 = this.ProspectParty;
+
+if (this.SalesCycle.IsSet())
+	SalesCycle1 = this.SalesCycle;
+
+if (this.SalesForecast.IsSet())
+	SalesForecast1 = this.SalesForecast;
+
+if (this.MainEmployeeResponsibleParty.IsSet())
+	MainEmpRespParty1 = this.MainEmployeeResponsibleParty;
+
+
+//Create Workspace if Status = Bidding (ExternalUserStatusCode = Z06) & Phase = Develop Options (SalesCyclePhaseCode = Z03) 
+if (this.ZAribaWorkspaceID.IsInitial() && this.ExternalUserStatusCode.content == "Z06" && SalesCycle1.SalesCyclePhaseCode.content == "Z03")
+	AribaContractRequest.Action = "create";
+
+//Update Workspace if Status = Lost (Z12), Abandoned (Z13), Letter of Offer (Z07), Prepare Contract (Z08)
+else if (!this.ZAribaWorkspaceID.IsInitial() && (this.ExternalUserStatusCode.content == "Z12" || this.ExternalUserStatusCode.content == "Z13" || this.ExternalUserStatusCode.content == "Z07" || this.ExternalUserStatusCode.content == "Z08"))
+	AribaContractRequest.Action = "update";
+
+
+if (AribaContractRequest.Action == "create" || AribaContractRequest.Action == "update")
+{
+
+	AribaContractRequest.OpportunityID = this.ID.content;
+	AribaContractRequest.OpportunityType = this.ProcessingTypeCode;
+	AribaContractRequest.Name = this.Name.content;
+
+	if (ProspectParty1.IsSet())
+		AribaContractRequest.Account = ProspectParty1.PartyKey.PartyID.content; // Customer or Account
+	//AribaContractRequest.SalesUnit = this.SalesUnitParty.PartyKey.PartyID.content;  //Req
+
+
+	//To fetch user id from employee uuid
+	if (MainEmpRespParty1.IsSet())
+	{
+
+		var Employee1;
+		if (MainEmpRespParty1.Employee.IsSet())
+			Employee1 = MainEmpRespParty1.Employee;
+
+		var queryByIdentityUUID = Identity.QueryByElements;
+		var queryByIdentityUUIDParameter = queryByIdentityUUID.CreateSelectionParams();
+		var BP_UUID = Employee1.UUID.content;
+
+		queryByIdentityUUIDParameter.Add(queryByIdentityUUID.BusinessPartnerUUID.content, "I", "EQ", BP_UUID);
+		var result = queryByIdentityUUID.Execute(queryByIdentityUUIDParameter);
+		var first = result.GetFirst(); // points to identity instance
+		//var person = first.Person;
+		//var bpUUId = person.UUID.content;
+
+		if (!first.ID.content.IsInitial())
+			AribaContractRequest.Owner = first.ID.content.ToLowerCase();
+	}
+
+
+	AribaContractRequest.Status = this.Status.LifeCycleStatusCode; 
+	if (SalesCycle1.IsSet())                 
+		AribaContractRequest.Stage = SalesCycle1.SalesCyclePhaseCode.content;       
+	//AribaContractRequest.SalesTeam = this.SalesTeamParty.GetFirst().PartyKey.PartyID.content; //Req
+	//Request.Commodity_MaterialGroup = this.Item.ItemProduct.GetFirst().ProductCategoryHierarchyProductCategoryIDKey.ProductCategoryInternalID;
+	if (SalesForecast1.IsSet())
+	{
+		AribaContractRequest.BiddingAmount = SalesForecast1.ExpectedRevenueAmount.content.ToString();
+		AribaContractRequest.EffectiveDate = SalesForecast1.ExpectedProcessingDatePeriod.StartDate.ToString();
+		AribaContractRequest.ExpirationDate = SalesForecast1.ExpectedProcessingDatePeriod.EndDate.ToString();
+	}
+
+	//AribaContractRequest.Commodity_MaterialGroup =                 //Req
+	//AribaContractRequest.TemplateId = will be maintained in HCI
+	//AribaContractRequest.Region = 
+	//AribaContractRequest.Description = 
+	AribaContractRequest.ExpirationTermType = "Fixed";
+	AribaContractRequest.OnBehalfUserPasswordAdapter = "PasswordAdapter1";
+	AribaContractRequest.Domain = "custom";
+
+
+	AribaContractRequest.ProjectType = this.ProjectType;
+	//If ProjectType is Sub Opportunity then only we need to search for parent Opp
+	if (this.ProjectType == "121")
+	{
+
+		foreach (var BTD_1 in this.BusinessTransactionDocumentReference)
+		{
+			if (BTD_1.BusinessTransactionDocumentRelationshipRoleCode == "13") //Parent Opp Role code is 13
+			{
+				var ParentOPPquery = Opportunity.QueryByElements;
+				// 2. Selection
+				var ParentOPPselectionParams = ParentOPPquery.CreateSelectionParams();
+				ParentOPPselectionParams.Add(ParentOPPquery.ID.content, "I", "EQ", BTD_1.BusinessTransactionDocumentReference.ID.content);
+				// Result
+				var ParentOPPresult = ParentOPPquery.Execute(ParentOPPselectionParams);
+				var ParentOPPresult_F = ParentOPPresult.GetFirst();
+
+				AribaContractRequest.ParentAgreementId = ParentOPPresult_F.ZAribaWorkspaceID;
+				break;
+			}
+		} //foreach
+	}
+
+
+
+	//Execute Web Service
+	AribaContractResponse = AribaContractExtWebServ.getAribaWSDetails(AribaContractRequest, "", "AribaContractScenario");
+
+	if (AribaContractRequest.Action == "create")
+	{
+		this.ZAribaWorkspaceID = AribaContractResponse.AribaWorkspace;
+		this.ZAribaURL = AribaContractResponse.AribaURL;
+	}
+
+	// Show error message if response is initial
+	if (AribaContractResponse.IsInitial())
+	{   
+		raise WebServiceError.Create("E"); 
+		return;
+	}   
+
+	// Fault messages   
+	var faultItems = AribaContractResponse.CommunicationFault.Item;   
+	if (faultItems.Count() > 0)
+	{   
+		raise WebServiceError.Create("E");   
+		// Display Error Message   
+		raise Message_All.Create("E", AribaContractResponse.CommunicationFault.Item.GetLast().Note);   
+	}  
+
+	//var Status : AribaContractResponse.Status;
+	if (AribaContractResponse.Status == "0") { }
+	else
+	{
+		var ErrorMessage = "Error in Ariba while handling Contract Workspace. ".Concatenate(AribaContractResponse.ErrorMessage);
+		raise Message_All.Create("E", ErrorMessage);  
+	}
+
+}
+
+
+
+
+
+//***************Opportunity-CPM Integration : Additional fields update : FD I-0076 *********************** 
+
+
+//if (this.ProfessionalServicesMasterProject.IsSet())
+
+
+if (this.ProfessionalServicesMasterProject.IsSet())
+{
+
+	var Proj = this.ProfessionalServicesMasterProject;
+	var SalesAndServ;
+
+	if (this.SalesAndServiceBusinessArea.IsSet())
+		SalesAndServ = this.SalesAndServiceBusinessArea;
+
+	if (SalesAndServ.IsSet())
+	{
+		if (SalesAndServ.SalesGroup.IsSet())
+			Proj.ZSalesGroup = SalesAndServ.SalesGroup.ID;
+
+		if (SalesAndServ.SalesOffice.IsSet())
+			Proj.ZSalesOffice = SalesAndServ.SalesOffice.ID;
+	}
+
+	Proj.ZServiceLevelType = this.ServiceLevelType;
+
+	//if(this.SalesAndServiceBusinessArea.SalesGroup.IsSet())
+	//this.ProfessionalServicesMasterProject.ZRegion = this.SalesAndServiceBusinessArea.SalesGroup.ID;
+
+	//this.ProfessionalServicesMasterProject.ZOricaRegion = this.SalesAndServiceBusinessArea.SalesGroup.ID;
+
+
+	Proj.ZOpportunityCustomStatus = this.ExternalUserStatusCode.content;
+
+
+	Proj.ZCustomerIndustry = this.Industry;
+
+
+	if (ProspectParty1.IsSet())
+	{
+
+		if (ProspectParty1.MainPartyContactParty.IsSet())
+		{
+			var MainPartyContactParty1 = ProspectParty1.MainPartyContactParty;
+
+			if (MainPartyContactParty1.AddressSnapshot.IsSet()) 
+			{
+				var AddressSnapshot1 = MainPartyContactParty1.AddressSnapshot;
+				if (AddressSnapshot1.DefaultMobilePhone.IsSet())
+					Proj.ZContactMobile = AddressSnapshot1.DefaultMobilePhone.FormattedNumberDescription;
+			}
+  
+  
+			if (MainPartyContactParty1.BusinessPartner.IsSet()) 
+			{
+				var BusinessPartner1 = MainPartyContactParty1.BusinessPartner;
+				if (BusinessPartner1.CurrentDefaultIsContactPersonFor.IsSet())
+				{
+					var CurDefIsContPersonFor1 = BusinessPartner1.CurrentDefaultIsContactPersonFor;
+					if (CurDefIsContPersonFor1.BusinessPartnerRelationship.IsSet())
+					{
+						var BusinessPartnerRel1 = CurDefIsContPersonFor1.BusinessPartnerRelationship;
+						if (BusinessPartnerRel1.ContactPerson.IsSet())	
+							Proj.ZContactFunctionRole = BusinessPartnerRel1.ContactPerson.BusinessPartnerFunctionTypeCode.content; 
+					}   //BusinessPartnerRelationship
+				}   //CurrentDefaultIsContactPersonFor
+			}   //BusinessPartner
+
+		} //MainPartyContactParty
+	} //prospectParty
+}

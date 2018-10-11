@@ -1,0 +1,7 @@
+﻿import AP.Common.GDT;
+import AP.FO.Activity.Global;
+
+ [Extension] businessobject AP.FO.Activity.Global:Questionnaire {
+ 
+  
+}

@@ -1,0 +1,52 @@
+﻿import AP.Common.GDT as apCommonGDT;
+import BASIS.Global as basisGlobal;
+
+businessobject VoC_Disposition raises Message_All {
+
+message Message_All text "&1" : LANGUAGEINDEPENDENT_Text;
+
+[AlternativeKey]
+[Label ("Respondent ID")]                   element ZRespondentID:ID;
+[Label ("Account ID")]                       element ZAccountID:BusinessPartnerInternalID;
+[Label ("ID")]                              element ZID:ID;
+[Label ("Region")]                          element ZRegion:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("Sub-Region")]                      element ZSubRegion:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("Country")]                         element ZCountry:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("Customer Name")]                    element ZCustomerName:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("Customer Global Account Name")]       element ZCustomerGlobalAccountName:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("Customer Orica Account Manager")]     element ZCustomerOricaAccountManager:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("Customer First Name")]               element ZCustomerFirstName:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("Customer Last Name")]                element ZCustomerLastName:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("Total Calls")]                      element ZTotalCalls:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("Last Call Disposition")]            element ZLastCallDisposition:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("Last Call Disposition1")]            element ZLastCallDisposition1:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("WebInvSent")]                      element ZWebInvSent:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("WebInvNotSent")]                   element ZWebInvNotSent:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("WebInvBounce")]                    element ZWebInvBounce:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("WebInvOpen")]                      element ZWebInvOpen:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("WebRemSent")]                      element ZWebRemSent:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("WebRemNotSent")]                   element ZWebRemNotSent:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("WebRemBounce")]                    element ZWebRemBounce:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("WebRemOpen")]                      element ZWebRemOpen:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("WebOptOut")]                       element ZWebOptOut:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("WebClick")]                        element ZWebClick:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("Started")]                         element ZStarted:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("Suspended")]                       element ZSuspended:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("Web Complete")]                     element ZWebComplete:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("CATI Complete")]                    element ZCATIComplete:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("Sample Killed")]                    element ZSampleKilled:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("Rejected")]                        element ZRejected:LANGUAGEINDEPENDENT_SHORT_Name;
+[Label ("Modified Date")]                    element ZModifiedDate:apCommonGDT:Date;
+
+
+ node ZTask [0,n]
+ {
+  [Label ("Task ID")]                    element ZTaskID:ID;
+  [Label ("Task UUID")]                  element ZTaskUUID:UUID;
+  [Label ("Subject")]                    element ZName:EXTENDED_Name;
+  [Label ("Employee Responsible ID")]    element ZTask_EmpResp_ID:EmployeeID;
+  [Label ("Employee Responsible UUID")]  element ZTask_EmpResp_UUID:LANGUAGEINDEPENDENT_LONG_Text;
+  [Label ("Employee Responsible Name")]  element ZTask_EmpResp_Name:LANGUAGEINDEPENDENT_LONG_Name;
+
+ }
+}

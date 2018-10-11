@@ -1,0 +1,36 @@
+﻿/*
+  	Developer : Shiddalingesh.Akki
+	Functional Specs ID : E-1912	
+*/
+
+import ABSL;
+import AP.CRM.Global;
+
+if(this.ToParent.VersionID.IDCommon == "69") //Type = Ticket Answer 
+{
+ 
+ if(this.BusinessTransactionDocumentTypeCode == "118") // Type = Only Ticket BTD
+ {
+  
+  // Query Service Request BO
+  var SRquery = ServiceRequest.QueryByElements;
+  // Selection
+  var SRselectionParams = SRquery.CreateSelectionParams();
+  //Query All Ticket with ServiceIssueCategoryID as Performance (CA_1) as survey is only for this
+  SRselectionParams.Add(SRquery.ServiceTermsServiceIssueCategoryCatalogueCategoryKey.ServiceIssueCategoryID.content, "I", "EQ", "CA_1");
+  // Result
+  var SRresultData = SRquery.Execute(SRselectionParams);//All Performance Tickets
+  
+  foreach(var Ticket_1 in SRresultData)
+  {
+  if(Ticket_1.UUID.content == this.BusinessTransactionDocumentUUID.content && Ticket_1.ServiceTerms.ServiceRequestUserLifeCycleStatusCode == "Z8")
+   {
+   Ticket_1.ServiceTerms.ServiceRequestUserLifeCycleStatusCode.Replace("Z8","Z6");
+   // Z8 = Closed Pending Feedback
+   // Z6 = Closed With Feedback
+   }
+  }
+
+  
+ } 
+}

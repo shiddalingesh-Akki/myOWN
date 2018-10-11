@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sadl:definition xmlns:ass="http://sap.com/sap.nw.f.sadl/association" date="20181011" time="175811" uuid="4E65F9242E2A4302ADBCF81BF15D919E" xmlns:sadl="http://sap.com/sap.nw.f.sadl">
+  <sadl:conversions>
+    <sadl:conversion type="ALPHA" />
+  </sadl:conversions>
+  <sadl:modes>
+    <sadl:mode type="FSI" />
+  </sadl:modes>
+  <sadl:dataSource name="DS" binding="Y3N0R004Y_ACANDE2C1EB1AE557E60/ass:ROOT4F903855210031B0" type="BusinessObjectNode" d2p1:mdrsBinding="Account_Plan.Root" xmlns:d2p1="http://sap.com/xi/AP/PDI" />
+  <sadl:resultSet>
+    <sadl:structure name="Y3N0R004Y_ACANDE2C1EB1AE557E60" dataSource="DS" d3p1:mdrsName="Account_Plan.Root" xmlns:d3p1="http://sap.com/xi/AP/PDI">
+      <sadl:attribute name="ZACCOUIDROOTD9B990A2EC437C0F" binding="ZACCOUNTID36E8FE28C13FCBF2" d3p1:mdrsName="ZAccountID" />
+      <sadl:attribute name="ZAPPROUSROOT201F4F51E18574D4" binding="ZAPPROTATUSF5A57A29ADB2C059" d3p1:mdrsName="ZApprovalStatus" />
+      <sadl:attribute name="ZACCOUGYROOT083BDFCC7C6505BC" binding="ZACCOUATEGY6574F1A1C04A4ACD-LANGUAGE_CODE" d3p1:mdrsName="ZAccountStrategy/languageCode" />
+      <sadl:attribute name="ZACCOUGYROOTBB1D4FE2803A113A" binding="ZACCOUATEGY6574F1A1C04A4ACD-CONTENT" d3p1:mdrsName="ZAccountStrategy/content" />
+      <sadl:attribute name="ZCUSTOGYROOT72C2CF9E1C762358" binding="ZCUSTOATEGYD8E17E135A4F611F-LANGUAGE_CODE" d3p1:mdrsName="ZCustomerStrategy/languageCode" />
+      <sadl:attribute name="ZCUSTOGYROOT0337E32E6BC5487C" binding="ZCUSTOATEGYD8E17E135A4F611F-CONTENT" d3p1:mdrsName="ZCustomerStrategy/content" />
+      <sadl:attribute name="ZCRNTBESROOTCCD51DA2DD371CB0" binding="ZCRNTBSALESFAA1EFB38CBC57E1-CURRENCY_CODE" d3p1:mdrsName="ZCrntBgt_Sales/currencyCode" />
+      <sadl:attribute name="ZCRNTBESROOTAA6D2573B1DB4F90" binding="ZCRNTBSALESFAA1EFB38CBC57E1-CONTENT" d3p1:mdrsName="ZCrntBgt_Sales/content" />
+      <sadl:attribute name="ZCRNTBESROOT33ABD99ED3E37AB5" binding="ZCRNTBSALESDBD6EE7FC40F9951-CURRENCY_CODE" d3p1:mdrsName="ZCrntBgt_ProductSales/currencyCode" />
+      <sadl:attribute name="ZCRNTBESROOT8F5B14038D258DFE" binding="ZCRNTBSALESDBD6EE7FC40F9951-CONTENT" d3p1:mdrsName="ZCrntBgt_ProductSales/content" />
+      <sadl:attribute name="ZCRNTBESROOT64C4BDB364665B35" binding="ZCRNTBSALES41B5C74CFD4587D4-CURRENCY_CODE" d3p1:mdrsName="ZCrntBgt_ServiceSales/currencyCode" />
+      <sadl:attribute name="ZCRNTBESROOT7561B1447A2A73FB" binding="ZCRNTBSALES41B5C74CFD4587D4-CONTENT" d3p1:mdrsName="ZCrntBgt_ServiceSales/content" />
+      <sadl:attribute name="ZCRNTBESROOTA224F361F88DF5DB" binding="ZCRNTBSALES2045368CD329332C-CURRENCY_CODE" d3p1:mdrsName="ZCrntBgt_PackagedSales/currencyCode" />
+      <sadl:attribute name="ZCRNTBESROOT0F3C78842C0FD42F" binding="ZCRNTBSALES2045368CD329332C-CONTENT" d3p1:mdrsName="ZCrntBgt_PackagedSales/content" />
+      <sadl:attribute name="ZCRNTBESROOTC244F3F6C99DA24C" binding="ZCRNTBSALESEC127ABDDF09BD4F-CURRENCY_CODE" d3p1:mdrsName="ZCrntBgt_InitiatedSystemSales/currencyCode" />
+      <sadl:attribute name="ZCRNTBESROOT19F9C7CF78CF718F" binding="ZCRNTBSALESEC127ABDDF09BD4F-CONTENT" d3p1:mdrsName="ZCrntBgt_InitiatedSystemSales/content" />
+      <sadl:attribute name="ZCRNTBESROOTC00BAEA4979DE6E2" binding="ZCRNTBSALESBA8598182828A646-CURRENCY_CODE" d3p1:mdrsName="ZCrntBgt_BulkSales/currencyCode" />
+      <sadl:attribute name="ZCRNTBESROOT66EDF713C976BFAE" binding="ZCRNTBSALESBA8598182828A646-CONTENT" d3p1:mdrsName="ZCrntBgt_BulkSales/content" />
+      <sadl:attribute name="ZCRNTBESROOT33A898FBBAE982E2" binding="ZCRNTBSALES04F130693231D546-CURRENCY_CODE" d3p1:mdrsName="ZCrntBgt_GroundSupportSales/currencyCode" />
+      <sadl:attribute name="ZCRNTBESROOT34D769BE69FB9BF2" binding="ZCRNTBSALES04F130693231D546-CONTENT" d3p1:mdrsName="ZCrntBgt_GroundSupportSales/content" />
+      <sadl:attribute name="ZCRNTBMEROOT2261FC747FB29251" binding="ZCRNTBOLUMEB9BF385E10946428-CURRENCY_CODE" d3p1:mdrsName="ZCrntBgt_BulkVolume/currencyCode" />
+      <sadl:attribute name="ZCRNTBMEROOT766FD5D2C692A018" binding="ZCRNTBOLUMEB9BF385E10946428-CONTENT" d3p1:mdrsName="ZCrntBgt_BulkVolume/content" />
+      <sadl:attribute name="ZCRNTYESROOT875FA9B809264A7F" binding="ZCRNTYSALES9FFC25C3059A2806-CURRENCY_CODE" d3p1:mdrsName="ZCrntYTD_Sales/currencyCode" />
+      <sadl:attribute name="ZCRNTYESROOTBBC2A738B27638C3" binding="ZCRNTYSALES9FFC25C3059A2806-CONTENT" d3p1:mdrsName="ZCrntYTD_Sales/content" />
+      <sadl:attribute name="ZCRNTYESROOT9E1F09FD9094DC70" binding="ZCRNTYSALES358963820361FBC6-CURRENCY_CODE" d3p1:mdrsName="ZCrntYTD_ProductSales/currencyCode" />
+      <sadl:attribute name="ZCRNTYESROOT6D4856789F2D522E" binding="ZCRNTYSALES358963820361FBC6-CONTENT" d3p1:mdrsName="ZCrntYTD_ProductSales/content" />
+      <sadl:attribute name="ZCRNTYESROOT1038E3D02C570EFB" binding="ZCRNTYSALES63D640948320AB3A-CURRENCY_CODE" d3p1:mdrsName="ZCrntYTD_ServiceSales/currencyCode" />
+      <sadl:attribute name="ZCRNTYESROOT1845C0936A868C57" binding="ZCRNTYSALES63D640948320AB3A-CONTENT" d3p1:mdrsName="ZCrntYTD_ServiceSales/content" />
+      <sadl:attribute name="ZCRNTYESROOT1A1A742F928F1B0D" binding="ZCRNTYSALES2A75850F352713C8-CURRENCY_CODE" d3p1:mdrsName="ZCrntYTD_PackagedSales/currencyCode" />
+      <sadl:attribute name="ZCRNTYESROOTFB669AAE7ADDC6DD" binding="ZCRNTYSALES2A75850F352713C8-CONTENT" d3p1:mdrsName="ZCrntYTD_PackagedSales/content" />
+      <sadl:attribute name="ZCRNTYESROOT1D6E14CBED537229" binding="ZCRNTYSALES893FF92603B12F36-CURRENCY_CODE" d3p1:mdrsName="ZCrntYTD_InitiatedSystemSales/currencyCode" />
+      <sadl:attribute name="ZCRNTYESROOT1A31F02E4F0B4180" binding="ZCRNTYSALES893FF92603B12F36-CONTENT" d3p1:mdrsName="ZCrntYTD_InitiatedSystemSales/content" />
+      <sadl:attribute name="ZCRNTYESROOT94187059E58490F6" binding="ZCRNTYSALESB73C9D6E779BAC71-CURRENCY_CODE" d3p1:mdrsName="ZCrntYTD_BulkSales/currencyCode" />
+      <sadl:attribute name="ZCRNTYESROOT42E47C9AEB752A10" binding="ZCRNTYSALESB73C9D6E779BAC71-CONTENT" d3p1:mdrsName="ZCrntYTD_BulkSales/content" />
+      <sadl:attribute name="ZCRNTYESROOTFBF73F4222F823C2" binding="ZCRNTYSALES6F5B065AF0D1FB94-CURRENCY_CODE" d3p1:mdrsName="ZCrntYTD_GroundSupportSales/currencyCode" />
+      <sadl:attribute name="ZCRNTYESROOT8C6327EE754D1AD2" binding="ZCRNTYSALES6F5B065AF0D1FB94-CONTENT" d3p1:mdrsName="ZCrntYTD_GroundSupportSales/content" />
+      <sadl:attribute name="ZCRNTYMEROOTD547EA46D35FB687" binding="ZCRNTYOLUMEB81EA94245ECC593-CURRENCY_CODE" d3p1:mdrsName="ZCrntYTD_BulkVolume/currencyCode" />
+      <sadl:attribute name="ZCRNTYMEROOTD3593295113B6957" binding="ZCRNTYOLUMEB81EA94245ECC593-CONTENT" d3p1:mdrsName="ZCrntYTD_BulkVolume/content" />
+      <sadl:attribute name="ZPRVSYESROOT06C1B2E6FB9EE2F6" binding="ZPRVSYSALES4D889E13C465F2FC-CURRENCY_CODE" d3p1:mdrsName="ZPrvsYear_Sales/currencyCode" />
+      <sadl:attribute name="ZPRVSYESROOT0585FB8E71D2DC68" binding="ZPRVSYSALES4D889E13C465F2FC-CONTENT" d3p1:mdrsName="ZPrvsYear_Sales/content" />
+      <sadl:attribute name="ZPRVSYESROOTFB62FDC60F2F4E61" binding="ZPRVSYSALES74A073386C4F64B8-CURRENCY_CODE" d3p1:mdrsName="ZPrvsYear_ProductSales/currencyCode" />
+      <sadl:attribute name="ZPRVSYESROOT85183B0525A58DE4" binding="ZPRVSYSALES74A073386C4F64B8-CONTENT" d3p1:mdrsName="ZPrvsYear_ProductSales/content" />
+      <sadl:attribute name="ZPRVSYESROOTBE88C6C3479C37B4" binding="ZPRVSYSALES17C5B2CEE44FB120-CURRENCY_CODE" d3p1:mdrsName="ZPrvsYear_ServiceSales/currencyCode" />
+      <sadl:attribute name="ZPRVSYESROOTFD921EF4D281B79F" binding="ZPRVSYSALES17C5B2CEE44FB120-CONTENT" d3p1:mdrsName="ZPrvsYear_ServiceSales/content" />
+      <sadl:attribute name="ZPRVSYESROOT632B56216E26C5B3" binding="ZPRVSYSALES6C1A808027DC200B-CURRENCY_CODE" d3p1:mdrsName="ZPrvsYear_PackagedSales/currencyCode" />
+      <sadl:attribute name="ZPRVSYESROOT3EBFC6621B83C8D6" binding="ZPRVSYSALES6C1A808027DC200B-CONTENT" d3p1:mdrsName="ZPrvsYear_PackagedSales/content" />
+      <sadl:attribute name="ZPRVSYESROOT86400B37CFF046D2" binding="ZPRVSYSALES2F2A92B80BA2C0AE-CURRENCY_CODE" d3p1:mdrsName="ZPrvsYear_InitiatedSystemSales/currencyCode" />
+      <sadl:attribute name="ZPRVSYESROOT5874C6D90928A7F0" binding="ZPRVSYSALES2F2A92B80BA2C0AE-CONTENT" d3p1:mdrsName="ZPrvsYear_InitiatedSystemSales/content" />
+      <sadl:attribute name="ZPRVSYESROOT979D8870CF071319" binding="ZPRVSYSALES7B0B644CEFB4A03C-CURRENCY_CODE" d3p1:mdrsName="ZPrvsYear_BulkSales/currencyCode" />
+      <sadl:attribute name="ZPRVSYESROOT218AE8BBDDF3CED3" binding="ZPRVSYSALES7B0B644CEFB4A03C-CONTENT" d3p1:mdrsName="ZPrvsYear_BulkSales/content" />
+      <sadl:attribute name="ZPRVSYESROOTA4C460518C8B0333" binding="ZPRVSYSALES86FE84055C6620A9-CURRENCY_CODE" d3p1:mdrsName="ZPrvsYear_GroundSupportSales/currencyCode" />
+      <sadl:attribute name="ZPRVSYESROOT3A716959DF8297F2" binding="ZPRVSYSALES86FE84055C6620A9-CONTENT" d3p1:mdrsName="ZPrvsYear_GroundSupportSales/content" />
+      <sadl:attribute name="ZPRVSYMEROOT93C6B778515149CB" binding="ZPRVSYOLUME9D02E881FB153BF6-CURRENCY_CODE" d3p1:mdrsName="ZPrvsYear_BulkVolume/currencyCode" />
+      <sadl:attribute name="ZPRVSYMEROOT3CDC39726B44433F" binding="ZPRVSYOLUME9D02E881FB153BF6-CONTENT" d3p1:mdrsName="ZPrvsYear_BulkVolume/content" />
+      <sadl:attribute name="ZCMPY_ESROOT7D322AD573AF370C" binding="ZCMPY_SALES47C10F901B05E816-CURRENCY_CODE" d3p1:mdrsName="ZCMPY_Sales/currencyCode" />
+      <sadl:attribute name="ZCMPY_ESROOT9CBEB786651B76A8" binding="ZCMPY_SALES47C10F901B05E816-CONTENT" d3p1:mdrsName="ZCMPY_Sales/content" />
+      <sadl:attribute name="ZCMPY_ESROOT9FBF2168670FE4F7" binding="ZCMPY_SALES0CC7B9C595D6B984-CURRENCY_CODE" d3p1:mdrsName="ZCMPY_ProductSales/currencyCode" />
+      <sadl:attribute name="ZCMPY_ESROOT6F70B87253D1EC38" binding="ZCMPY_SALES0CC7B9C595D6B984-CONTENT" d3p1:mdrsName="ZCMPY_ProductSales/content" />
+      <sadl:attribute name="ZCMPY_ESROOT60528B289E5BC9C3" binding="ZCMPY_SALES92CF2DBAB85C756E-CURRENCY_CODE" d3p1:mdrsName="ZCMPY_ServiceSales/currencyCode" />
+      <sadl:attribute name="ZCMPY_ESROOT7DA832D74A20F009" binding="ZCMPY_SALES92CF2DBAB85C756E-CONTENT" d3p1:mdrsName="ZCMPY_ServiceSales/content" />
+      <sadl:attribute name="ZCMPY_ESROOTFC0CEA12637F3DDD" binding="ZCMPY_SALESDB4E0E8A06D98750-CURRENCY_CODE" d3p1:mdrsName="ZCMPY_PackagedSales/currencyCode" />
+      <sadl:attribute name="ZCMPY_ESROOT3C851818AE1AAD52" binding="ZCMPY_SALESDB4E0E8A06D98750-CONTENT" d3p1:mdrsName="ZCMPY_PackagedSales/content" />
+      <sadl:attribute name="ZCMPY_ESROOT08462AE328F970E1" binding="ZCMPY_SALES678C8799A9A45096-CURRENCY_CODE" d3p1:mdrsName="ZCMPY_InitiatedSystemSales/currencyCode" />
+      <sadl:attribute name="ZCMPY_ESROOTBEA0B445D6E4A446" binding="ZCMPY_SALES678C8799A9A45096-CONTENT" d3p1:mdrsName="ZCMPY_InitiatedSystemSales/content" />
+      <sadl:attribute name="ZCMPY_ESROOT7862A3A5EE2C4CB5" binding="ZCMPY_SALESFD3C92E4FDF3A086-CURRENCY_CODE" d3p1:mdrsName="ZCMPY_BulkSales/currencyCode" />
+      <sadl:attribute name="ZCMPY_ESROOTC0166165B4E0BE6A" binding="ZCMPY_SALESFD3C92E4FDF3A086-CONTENT" d3p1:mdrsName="ZCMPY_BulkSales/content" />
+      <sadl:attribute name="ZCMPY_ESROOTBB845A1A8422F9BA" binding="ZCMPY_SALES41F7F61F9D1C6883-CURRENCY_CODE" d3p1:mdrsName="ZCMPY_GroundSupportSales/currencyCode" />
+      <sadl:attribute name="ZCMPY_ESROOT46CCB3C8919017AC" binding="ZCMPY_SALES41F7F61F9D1C6883-CONTENT" d3p1:mdrsName="ZCMPY_GroundSupportSales/content" />
+      <sadl:attribute name="ZCMPY_MEROOT8511CD1FDA0BC769" binding="ZCMPY_OLUMEF1D39743583F0DF4-CURRENCY_CODE" d3p1:mdrsName="ZCMPY_BulkVolume/currencyCode" />
+      <sadl:attribute name="ZCMPY_MEROOTE2D4F72A94FE837E" binding="ZCMPY_OLUMEF1D39743583F0DF4-CONTENT" d3p1:mdrsName="ZCMPY_BulkVolume/content" />
+    </sadl:structure>
+  </sadl:resultSet>
+</sadl:definition>

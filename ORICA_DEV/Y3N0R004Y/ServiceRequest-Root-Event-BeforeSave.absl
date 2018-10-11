@@ -1,0 +1,234 @@
+﻿/*
+	
+	Developer : Shiddalingesh.Akki
+	Functional Specs ID : E-1641
+	The Custom logic to find out the priority based on Priority Questionaire	
+	
+*/
+
+import ABSL;
+
+var ServiceTerms1;
+if (this.ServiceTerms.IsSet())
+	ServiceTerms1 = this.ServiceTerms;
+
+var Sum = 0;
+
+//To find score for the field SHE
+if (this.SHE == "101")
+{
+	Sum = Sum + 15;
+}
+else if (this.SHE == "111")
+{
+	Sum = Sum + 12;
+} 
+else if (this.SHE == "121")
+{
+	Sum = Sum + 9;
+}
+else if (this.SHE == "131")
+{
+	Sum = Sum + 6;
+}
+else if (this.SHE == "141")
+{
+	Sum = Sum + 3;
+}
+else if (this.SHE == "151")
+{
+	Sum = Sum + 0;
+}
+
+
+//To find score for the field Customer
+if (this.Customer1 == "101")
+{
+	Sum = Sum + 10;
+}
+else if (this.Customer1 == "111")
+{
+	Sum = Sum + 8;
+}
+else if (this.Customer1 == "121")
+{
+	Sum = Sum + 6;
+}
+else if (this.Customer1 == "131")
+{
+	Sum = Sum + 4;
+}
+else if (this.Customer1 == "141")
+{
+	Sum = Sum + 2;
+}
+else if (this.Customer1 == "151")
+{
+	Sum = Sum + 0;
+}
+
+
+//To find score for the field Business
+if (this.Business == "101")
+{
+	Sum = Sum + 10;
+}
+else if (this.Business == "111")
+{
+	Sum = Sum + 8;
+}
+else if (this.Business == "121")
+{
+	Sum = Sum + 6;
+}
+else if (this.Business == "131")
+{
+	Sum = Sum + 4;
+}
+else if (this.Business == "141")
+{
+	Sum = Sum + 2;
+}
+else if (this.Business == "151")
+{
+	Sum = Sum + 0;
+}
+
+
+//To find score for the field ProductTechnology
+if (this.ProductTechnology == "101")
+{
+	Sum = Sum + 3;
+}
+else if (this.ProductTechnology == "111")
+{
+	Sum = Sum + 3;
+}
+else if (this.ProductTechnology == "121")
+{
+	Sum = Sum + 2;
+}
+else if (this.ProductTechnology == "131")
+{
+	Sum = Sum + 2;
+}
+else if (this.ProductTechnology == "141")
+{
+	Sum = Sum + 1;
+}
+else if (this.ProductTechnology == "151")
+{
+	Sum = Sum + 0;
+}
+
+
+
+//To find score for the field EnvironmentCommunity
+if (this.EnvironmentCommunity == "101")
+{
+	Sum = Sum + 3;
+}
+else if (this.EnvironmentCommunity == "111")
+{
+	Sum = Sum + 3;
+}
+else if (this.EnvironmentCommunity == "121")
+{
+	Sum = Sum + 2;
+}
+else if (this.EnvironmentCommunity == "131")
+{
+	Sum = Sum + 1;
+}
+else if (this.EnvironmentCommunity == "141")
+{
+	Sum = Sum + 1;
+}
+else if (this.EnvironmentCommunity == "151")
+{
+	Sum = Sum + 0;
+}
+
+
+//To find score for the field OpportunityValue
+if (this.OpportunityValue == "101")
+{
+	Sum = Sum + 9;
+}
+else if (this.OpportunityValue == "111")
+{
+	Sum = Sum + 7;
+}
+else if (this.OpportunityValue == "121")
+{
+	Sum = Sum + 5;
+}
+else if (this.OpportunityValue == "131")
+{
+	Sum = Sum + 3;
+}
+else if (this.OpportunityValue == "141")
+{
+	Sum = Sum + 2;
+}
+else if (this.OpportunityValue == "151")
+{
+	Sum = Sum + 0;
+}
+
+
+
+//To find the DeterminedPriority
+
+if (Sum >= 41 && Sum <= 50)
+{
+	this.DeterminedPriority = "101";         // P1 Ticket
+}
+else if (Sum >= 31 && Sum <= 40)
+{
+	this.DeterminedPriority = "111";         // P2 Ticket
+}
+
+else if (Sum >= 21 && Sum <= 30)
+{
+	this.DeterminedPriority = "121";         // P3 Ticket
+}
+
+else if (Sum >= 15 && Sum <= 20)
+{
+	this.DeterminedPriority = "131";          // P4 Ticket
+}
+
+else if (Sum >= 0 && Sum <= 14)
+{
+	this.DeterminedPriority = "141";          // P5 Ticket
+}
+
+
+//For tickets of Processing type code ZVOC (VoC Survey Tickets) 
+//Determinied priority should be P2
+if (this.ProcessingTypeCode == "ZVOC")
+{
+	this.DeterminedPriority = "111";
+}
+
+//To find the Priority
+
+if (this.DeterminedPriority == "101")
+{
+	ServiceTerms1.ServicePriorityCode = "1";
+}
+
+else if (this.DeterminedPriority == "111")
+{
+	ServiceTerms1.ServicePriorityCode = "2";
+}
+
+else if (this.DeterminedPriority == "121")
+{
+	ServiceTerms1.ServicePriorityCode = "3";
+}
+else if (this.DeterminedPriority == "131" || this.DeterminedPriority == "141")
+{
+	ServiceTerms1.ServicePriorityCode = "7";
+}

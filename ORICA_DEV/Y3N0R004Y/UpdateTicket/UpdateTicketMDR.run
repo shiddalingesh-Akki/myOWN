@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MassDataRunObject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://sap.com/ByD/PDI/MassDataRunObjectDefinition">
+  <MdroEsrNameSpace xmlns="">http://0000162212-one-off.sap.com/Y3N0R004Y_</MdroEsrNameSpace>
+  <MdroEsrName xmlns="">UpdateTicketMDR</MdroEsrName>
+  <MdroPrxName xmlns="">Y3N0R004Y_UPDR3F0FC56B5EAB55AE</MdroPrxName>
+  <ParallelProcessing xmlns="" />
+  <ApplicationLogDetailLevelCode xmlns="">7</ApplicationLogDetailLevelCode>
+  <ApplicationLogRetentionTimeCode xmlns="">P7D</ApplicationLogRetentionTimeCode>
+  <AccessControlledBoList xmlns="">
+    <AccessControlledBo>
+      <ActionEntity>
+        <BoEsrNameSpace>http://0000162212-one-off.sap.com/Y3N0R004Y_</BoEsrNameSpace>
+        <BoEsrName>UpdateTicket</BoEsrName>
+        <BoPrxName>Y3N0R004Y_UPET29C824A2B63E6223</BoPrxName>
+        <BoEsrNodeName>Root</BoEsrNodeName>
+        <BoPrxNodeName>ROOT4F903855210031B0</BoPrxNodeName>
+        <BoEsrEntityName>UpdateTicket</BoEsrEntityName>
+        <BoPrxEntityName>UPDATEICKET29C824A2B63E6223</BoPrxEntityName>
+      </ActionEntity>
+      <ActionPath>\TO_PARENT</ActionPath>
+      <QueryEntity>
+        <BoEsrNameSpace>http://0000162212-one-off.sap.com/Y3N0R004Y_</BoEsrNameSpace>
+        <BoEsrName>UpdateTicket</BoEsrName>
+        <BoPrxName>Y3N0R004Y_UPET29C824A2B63E6223</BoPrxName>
+        <BoEsrNodeName>QueryUpdateTicket</BoEsrNodeName>
+        <BoPrxNodeName>QUERYUICKETEE363C13CE2B3B18</BoPrxNodeName>
+        <BoEsrEntityName>QueryByElements</BoEsrEntityName>
+        <BoPrxEntityName>QUERY_BY_ELEMENTS</BoPrxEntityName>
+      </QueryEntity>
+      <QueryParameterList>
+        <QueryParameter>
+          <QueryEsrParameterName>ID</QueryEsrParameterName>
+          <QueryPrxParameterName>IDROOT5B57ADF3C76011D1</QueryPrxParameterName>
+          <QueryPrxParameterDataType>PDI_ABSL_IDENTIFIER</QueryPrxParameterDataType>
+          <MdroEsrNodeName>SelectByID</MdroEsrNodeName>
+          <MdroPrxNodeName>SEL_BY_IDTSF8021D79EB251276</MdroPrxNodeName>
+        </QueryParameter>
+      </QueryParameterList>
+    </AccessControlledBo>
+  </AccessControlledBoList>
+</MassDataRunObject>

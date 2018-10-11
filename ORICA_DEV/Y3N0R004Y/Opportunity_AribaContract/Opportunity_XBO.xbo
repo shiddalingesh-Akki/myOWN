@@ -1,0 +1,52 @@
+﻿import AP.Common.GDT;
+import AP.CRM.Global;
+
+[Extension] businessobject AP.CRM.Global:Opportunity raises Message_All, WebServiceError {
+ 
+        // You must activate this business object before you can access the extension fields
+        // or messages in script files, forms, and screens.
+
+		message WebServiceError text "Error in communication with SAP Ariba";
+		message Message_All text "&1" : LANGUAGEINDEPENDENT_EXTENDED_Name;
+
+		[Scenario(PES_OPP)] [Label("Ariba Workspace ID")] element ZAribaWorkspaceID : LANGUAGEINDEPENDENT_EXTENDED_Text;
+		[Scenario(PES_OPP)] [Label("Ariba URL")] element ZAribaURL : LANGUAGEINDEPENDENT_EXTENDED_Text;
+
+		node ZOpportunityProfile [0,n] {
+		[Label("Value Drivers")] element ZValueDrivers : LANGUAGEINDEPENDENT_EXTENDED_Text;
+		[Label("Needs")]         element ZNeeds : LANGUAGEINDEPENDENT_EXTENDED_Text;
+		[Label("KPI")]           element ZKPI : LANGUAGEINDEPENDENT_EXTENDED_Text;		 
+		}
+        
+   		node InstalledObject {
+   	    } 
+    
+   		node Item {
+   	   
+      		node ItemRevenuePlanReporting {
+      	    } 
+       
+      		node ItemQuantityPlanReporting {
+      	    } 
+
+        } 
+    
+   		node Party {
+   	   
+      		node PartyContactParty {
+      	    } 
+       
+      		node CompetitorProduct {
+      	    } 
+
+        } 
+    
+   		node RevenuePlanHeader {
+   	   
+      		node RevenuePlanReporting {
+      	    } 
+
+        } 
+     
+  
+}

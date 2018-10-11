@@ -1,0 +1,44 @@
+﻿import AP.Common.GDT as apCommonGDT;
+
+businessobject SalesPerformance {
+
+//Current Budget
+[Label ("CrntBgt Total Sales")]                    element ZCrntBgt_Sales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CrntBgt Total Product Sales")]            element ZCrntBgt_ProductSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CrntBgt Total Service Sales")]            element ZCrntBgt_ServiceSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CrntBgt Total Packaged Sales")]           element ZCrntBgt_PackagedSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CrntBgt Total Initiated System Sales")]   element ZCrntBgt_InitiatedSystemSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CrntBgt Total Bulk Sales")]               element ZCrntBgt_BulkSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CrntBgt Total Ground Support Sales")]     element ZCrntBgt_GroundSupportSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CrntBgt Total Bulk Volume")]              element ZCrntBgt_BulkVolume:LANGUAGEINDEPENDENT_EXTENDED_Text;
+
+//Current YTD
+[Label ("CrntYTD Total Sales")]                    element ZCrntYTD_Sales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CrntYTD Total Product Sales")]            element ZCrntYTD_ProductSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CrntYTD Total Service Sales")]            element ZCrntYTD_ServiceSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CrntYTD Total Packaged Sales")]           element ZCrntYTD_PackagedSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CrntYTD Total Initiated System Sales")]   element ZCrntYTD_InitiatedSystemSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CrntYTD Total Bulk Sales")]               element ZCrntYTD_BulkSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CrntYTD Total Ground Support Sales")]     element ZCrntYTD_GroundSupportSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CrntYTD Total Bulk Volume")]              element ZCrntYTD_BulkVolume:LANGUAGEINDEPENDENT_EXTENDED_Text;
+
+//Previous YTD
+[Label ("PrvsYear Total Sales")]                    element ZPrvsYear_Sales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("PrvsYear Total Product Sales")]            element ZPrvsYear_ProductSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("PrvsYear Total Service Sales")]            element ZPrvsYear_ServiceSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("PrvsYear Total Packaged Sales")]           element ZPrvsYear_PackagedSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("PrvsYear Total Initiated System Sales")]   element ZPrvsYear_InitiatedSystemSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("PrvsYear Total Bulk Sales")]               element ZPrvsYear_BulkSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("PrvsYear Total Ground Support Sales")]     element ZPrvsYear_GroundSupportSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("PrvsYear Total Bulk Volume")]              element ZPrvsYear_BulkVolume:LANGUAGEINDEPENDENT_EXTENDED_Text;
+
+//Current Month Previous Year
+[Label ("CMPY Total Sales")]                    element ZCMPY_Sales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CMPY Total Product Sales")]            element ZCMPY_ProductSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CMPY Total Service Sales")]            element ZCMPY_ServiceSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CMPY Total Packaged Sales")]           element ZCMPY_PackagedSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CMPY Total Initiated System Sales")]   element ZCMPY_InitiatedSystemSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CMPY Total Bulk Sales")]               element ZCMPY_BulkSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CMPY Total Ground Support Sales")]     element ZCMPY_GroundSupportSales:LANGUAGEINDEPENDENT_EXTENDED_Text;
+[Label ("CMPY Total Bulk Volume")]              element ZCMPY_BulkVolume:LANGUAGEINDEPENDENT_EXTENDED_Text;
+}

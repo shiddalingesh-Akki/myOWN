@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sadl:definition xmlns:ass="http://sap.com/sap.nw.f.sadl/association" date="20180926" time="170244" uuid="74E4FCF8FB99469CAC1F05354613096A" xmlns:sadl="http://sap.com/sap.nw.f.sadl">
+  <sadl:conversions>
+    <sadl:conversion type="ALPHA" />
+  </sadl:conversions>
+  <sadl:modes>
+    <sadl:mode type="FSI" />
+  </sadl:modes>
+  <sadl:dataSource name="DS" binding="OPPORTUNITY/ass:Y3N0R004Y_Z88D873C19FC80149" type="BusinessObjectNode" d2p1:mdrsBinding="Opportunity.ZOpportunityProfile" xmlns:d2p1="http://sap.com/xi/AP/PDI" />
+  <sadl:resultSet>
+    <sadl:structure name="OPPORTUNITY" dataSource="DS" d3p1:mdrsName="Opportunity.ZOpportunityProfile" xmlns:d3p1="http://sap.com/xi/AP/PDI">
+      <sadl:attribute name="ZVALUEROFILEF61D35967553E0BA" binding="ZVALUEIVERS108F496DD6BB8C68" d3p1:mdrsName="ZValueDrivers" />
+      <sadl:attribute name="ZNEEDSROFILE1A63FDF402C8909B" binding="ZNEEDS4AA5FAA496C9B37F" d3p1:mdrsName="ZNeeds" />
+      <sadl:attribute name="ZKPIZOROFILE632C3DB50FB8D234" binding="ZKPI82A8248A33A211C0" d3p1:mdrsName="ZKPI" />
+      <sadl:structure name="TOPAREROFILEA385025B7952C2B1" binding="ass:TO_PARENT" d3p1:mdrsName="ToParent">
+        <sadl:attribute name="IDCONTROFILEE20207C3E63E0BD8" binding="ID-CONTENT" d3p1:mdrsName="ID/content" />
+        <sadl:structure name="ACCESS_CONTROL_LIST" binding="ass:ACCESS_CONTROL_LIST" aclRelevant="TRUE">
+          <sadl:attribute name="ACL_NODE_ID" binding="NODE_ID" />
+        </sadl:structure>
+      </sadl:structure>
+    </sadl:structure>
+  </sadl:resultSet>
+</sadl:definition>

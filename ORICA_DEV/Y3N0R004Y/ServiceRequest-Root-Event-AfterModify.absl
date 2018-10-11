@@ -1,0 +1,18 @@
+﻿/*
+
+*/
+
+import ABSL;
+//import AP.CRM.Global;
+//import Common.DataTypes; 
+
+var ServiceTerms1;
+if (this.ServiceTerms.IsSet())
+ServiceTerms1 = this.ServiceTerms;
+
+//Set Service category as "CA_1313" (Intelligence) if, Ticket Type is "ZINT" (Intelligence)
+if (this.ProcessingTypeCode == "ZINT")
+{
+	ServiceTerms1.ServiceIssueCategoryCatalogueCategoryKey.ServiceIssueCategoryID.content = "CA_1313";
+}
+

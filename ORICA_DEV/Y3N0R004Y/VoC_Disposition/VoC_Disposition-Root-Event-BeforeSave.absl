@@ -1,0 +1,151 @@
+﻿/*
+	Developer : Shiddalingesh.Akki
+	Functional Specs ID : I-1787	
+*/
+
+import ABSL;
+import AP.Common.Global;
+import AP.CRM.Global;
+import AP.FO.BusinessPartner.Global;
+import AP.FO.Activity.Global;
+import AP.PC.ActivityManagement.Global;
+
+// Query customer to find owner
+var CustQuery = Customer.QueryByIdentification;
+// Selection
+var CustSelectionParams = CustQuery.CreateSelectionParams();
+CustSelectionParams.Add(CustQuery.InternalID, "I", "EQ", this.ZAccountID);
+// Result
+var CustResultData = CustQuery.Execute(CustSelectionParams);
+var CustResultData_1 = CustResultData.GetFirst();
+
+var emp;
+var emp_ID;
+var emp_Name;
+var empRespSales;
+if (CustResultData_1.IsSet())
+{
+	if (CustResultData_1.EmployeeResponsibleSales.IsSet())
+	{
+		empRespSales = CustResultData_1.EmployeeResponsibleSales;
+		emp_ID = empRespSales.EmployeeID.content;
+
+		if (empRespSales.Employee.IsSet())
+		{
+			emp = empRespSales.Employee;
+			var CurrCommon = emp.CurrentCommon;
+			if (CurrCommon.IsSet())
+				emp_Name = CurrCommon.BusinessPartnerFormattedName;
+		}
+	}
+}
+
+if (this.ZLastCallDisposition == "003" || this.ZLastCallDisposition == "005" || 
+   this.ZLastCallDisposition == "015" || this.ZLastCallDisposition == "019" || 
+   this.ZLastCallDisposition == "069" || this.ZLastCallDisposition == "075" ||
+	this.ZLastCallDisposition == "807" || this.ZLastCallDisposition == "809" ||
+	 this.ZLastCallDisposition == "983" || this.ZLastCallDisposition == "987" || 
+	 this.ZLastCallDisposition == "993")
+{
+
+	var Subject;
+	if (this.ZLastCallDisposition == "003")
+	{
+		Subject = "Update Contact Preferred Language";
+	}
+	else if (this.ZLastCallDisposition == "005")
+	{
+		Subject = "Update Contact Status(No longer working)";
+	}
+	else if (this.ZLastCallDisposition == "005")
+	{
+		Subject = "Update Contact Status(No longer working)";
+	}
+	else if (this.ZLastCallDisposition == "015")
+	{
+		Subject = "Update Contact Number";
+	}
+ 
+	else if (this.ZLastCallDisposition == "069")
+	{
+		Subject = "The opt out flag is set to True";
+	}
+	else if (this.ZLastCallDisposition == "075")
+	{
+		Subject = "Update Contact Number";
+	}
+	else if (this.ZLastCallDisposition == "807")
+	{
+		Subject = "Update Contact Number";
+	}
+	else if (this.ZLastCallDisposition == "809")
+	{
+		Subject = "Update Contact Number";
+	}
+	else if (this.ZLastCallDisposition == "983")
+	{
+		Subject = "Update Contact Details";
+	}
+	else if (this.ZLastCallDisposition == "987")
+	{
+		Subject = "Update Contact Number";
+	}
+	else if (this.ZLastCallDisposition == "993")
+	{
+		Subject = "Update Contact Number";
+	}
+   
+
+	var elZTask_Node : elementsof VoC_Disposition.ZTask;
+	var elActivityRoot : elementsof Activity;
+	var elActivityParty : elementsof Activity.Party;
+
+	// Activity: maintain Business Object type - mandatory (12 = Appointment; 39 = Email; 86 = Phonecall; 542 = Task)
+	elActivityRoot.TypeCode = "542"; // create Task
+   
+	// Activity: maintain description - mandatory
+	elActivityRoot.SubjectName = Subject;
+
+	// Activity: create new instance 
+	var instActivity = Activity.Create(elActivityRoot);
+
+	// Activity: set Processor
+	if (!instActivity.ProcessorParty.IsSet())
+	{
+		elActivityParty.PartyName = emp_ID;
+		instActivity.ProcessorParty.Create(elActivityParty);
+	}
+
+	// Activity: Set Employee Responsible  mandatory
+	if (instActivity.EmployeeResponsibleParty.IsSet())
+		instActivity.EmployeeResponsibleParty.PartyName = emp_ID;
+
+	//Activity: Account or Customer from Ticket
+	if (!this.ZAccountID.IsInitial())
+	{
+		if (!instActivity.MainActivityParty.IsSet())
+			instActivity.MainActivityParty.Create();
+		instActivity.MainActivityParty.PartyName = this.ZAccountID;
+	}  
+
+
+	// Activity: Contact party
+	//if (!this.ZContact_ID.IsInitial()){
+	//if(!instActivity.MainContactParty.IsSet())
+	//instActivity.MainContactParty.Create();				 
+	//instActivity.MainContactParty.PartyName = this.ZContact_ID;
+	//}
+
+	// Data for instance creation in Node - ZTask
+	elZTask_Node.ZName.content = Subject;
+	elZTask_Node.ZTask_EmpResp_ID.content = emp_ID;
+	elZTask_Node.ZTask_EmpResp_Name = emp_Name;
+	//elZTask_Node.ZTask_EmpResp_UUID = "";
+	elZTask_Node.ZTaskID = instActivity.ID;
+	elZTask_Node.ZTaskUUID.content = instActivity.UUID;
+
+	// ZTicket Node: create new instance
+	var instZTask_Node = this.ZTask.Create(elZTask_Node);
+
+   
+}

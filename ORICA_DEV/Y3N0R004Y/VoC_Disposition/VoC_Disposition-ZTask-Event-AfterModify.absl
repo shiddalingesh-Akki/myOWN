@@ -1,0 +1,81 @@
+﻿/*
+	Developer : Shiddalingesh.Akki
+	Functional Specs ID : I-1787
+*/
+
+import ABSL as apABSL;
+import AP.Common.GDT as apCommonGDT;
+import AP.PC.IdentityManagement.Global;
+import AP.FO.BusinessPartner.Global;
+
+var RespEmp_BO;
+var Emp_UUID;
+var Emp_Name;
+//When Owner changes:
+
+if (!this.ZTask_EmpResp_ID.content.IsInitial())
+{
+
+	// Emp ID to UUID
+	var queryEmp = Employee.Identification.QueryByEmployeeAttributes;
+	var querypar = queryEmp.CreateSelectionParams();
+	querypar.Add(queryEmp.EmployeeID.content, "I", "EQ", this.ZTask_EmpResp_ID.content);
+	var ResEmp = queryEmp.Execute(querypar);
+	var ResEmp_1 = ResEmp.GetFirst();
+
+	if (ResEmp_1.ToParent.IsSet())
+	{
+		RespEmp_BO = ResEmp_1.ToParent;
+		Emp_UUID = RespEmp_BO.UUID;
+
+		if (RespEmp_BO.CurrentCommon.IsSet())
+		{
+			var CurrCommon = RespEmp_BO.CurrentCommon;
+			Emp_Name = CurrCommon.BusinessPartnerFormattedName;
+		}
+	}
+
+	this.ZTask_EmpResp_UUID = Emp_UUID.content.ToString();
+	this.ZTask_EmpResp_Name = Emp_Name;
+
+}
+
+
+// When Owner is Blank - Automatically fetch Logged in user as default Owner
+
+
+
+if (this.ZTask_EmpResp_ID.IsInitial())
+{
+
+	var queryByIdentityUUID = Identity.QueryByElements;
+	var queryByIdentityUUIDParameter = queryByIdentityUUID.CreateSelectionParams();
+	var id = Context.GetCurrentIdentityUUID().content;
+	queryByIdentityUUIDParameter.Add(queryByIdentityUUID.UUID.content, "I", "EQ", id);
+	var result = queryByIdentityUUID.Execute(queryByIdentityUUIDParameter);
+	var first = result.GetFirst(); // points to identity instance
+	
+	var person;
+	if (first.Person.IsSet())
+		person = first.Person;
+	var bpUUId = person.UUID.content;
+
+
+	var queryByEmployeeBPUUID = Employee.QueryByIdentification;
+	var queryByEmployeeBPUUIDParameter = queryByEmployeeBPUUID.CreateSelectionParams();
+	queryByEmployeeBPUUIDParameter.Add(queryByEmployeeBPUUID.UUID.content, "I", "EQ", bpUUId);
+	var employeeQueryResult = queryByEmployeeBPUUID.Execute(queryByEmployeeBPUUIDParameter);
+	var EmployeeQueryResultCurrent = employeeQueryResult.GetFirst();
+
+	if (EmployeeQueryResultCurrent.IsSet())
+	{
+		this.ZTask_EmpResp_UUID = EmployeeQueryResultCurrent.UUID.content.ToString();
+		if (EmployeeQueryResultCurrent.Identification.Count() > 0)
+			this.ZTask_EmpResp_ID = EmployeeQueryResultCurrent.Identification.GetFirst().EmployeeID;
+		
+		if (EmployeeQueryResultCurrent.CurrentCommon.IsSet())
+			this.ZTask_EmpResp_Name = EmployeeQueryResultCurrent.CurrentCommon.BusinessPartnerFormattedName;
+	}
+}
+
+

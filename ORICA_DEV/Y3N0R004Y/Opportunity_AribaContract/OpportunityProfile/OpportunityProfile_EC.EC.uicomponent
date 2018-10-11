@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UXComponent id="dkOdULrBvqQuFOlzseH1dm" name="OpportunityProfile_EC" componentType="embedded" parentDependency="yes" AuthorizationClassificationCode="ReuseComponent"
+             useUIController="true" helpId="b2b61556-8fbf-4d48-8ff8-310c6118612e" designtimeVersion="25.0.555.1045" modelVersion="1.0" xmlns="http://www.sap.com/a1s/cd/oberon/uxcomponent-1.0" xmlns:uxv="http://www.sap.com/a1s/cd/oberon/uxview-1.0" xmlns:base="http://www.sap.com/a1s/cd/oberon/base-1.0" xmlns:uxc="http://www.sap.com/a1s/cd/oberon/uxcontroller-1.0" enableBackendOperationsClubbing="true">
+  <uxc:Interface id="0sL3N_RbxagHVuDDtId8Ym">
+    <uxc:Configuration id="OlFWvLDVIa_lOeZg5IFB0W" />
+  </uxc:Interface>
+  <uxc:Implementation id="mqwI_SC4raEqc_SHF9zgfm">
+    <uxc:DataModel id="hm$aC9_3h4MFL_jA0KlAgm" name="Root">
+      <uxc:DataField id="oNRkfdfIh4sMBDq4XuSaYW" name="@ErrorOccured" type="string" />
+      <uxc:DataField id="nce5O58AzaAiTDTV6gdeY0" name="@TransitionErrorOccurred" type="string" />
+      <uxc:Structure id="Z1ylpdNU$KIq8AHkBTKpd0" name="$System">
+        <uxc:DataField id="VggnVR8JH4ASL7HMjra5yW" name="SessionUrl" type="string" />
+        <uxc:DataField id="tStkfH8zva2m547PIoIB3G" name="Saved" type="boolean" />
+        <uxc:DataField id="e62u6JU77aYmunXlJRqzpW" name="IsPersistent" type="boolean" />
+      </uxc:Structure>
+      <uxc:Structure id="RJRSZYJpkq_2M1nNTUVWA0" name="UIState" />
+    </uxc:DataModel>
+    <uxc:ModelChanges />
+  </uxc:Implementation>
+  <uxc:Navigation id="Rv6HZb3G94oPaJGZIVxIvG" />
+  <UXView id="cpUhEWC5uKE_2Jyev2UrSG" patternType="embedded">
+    <uxv:IdentificationRegion id="zNHsSWZMIKskKrNv27Rngm" />
+    <uxv:ViewContainerRegion id="IfWLQ2zjHKw9kmZEYbAQN0">
+      <uxv:View id="eM3uZdOoO4IOWrElS$MUZm" columns="1" rows="1">
+        <uxv:PaneContainer id="2QUfX5cA44UT8CUSPos7Nm" column="0" row="0">
+        </uxv:PaneContainer>
+      </uxv:View>
+    </uxv:ViewContainerRegion>
+    <uxv:ActionForms />
+    <uxv:ModalDialogs id="K6S6F$0wO46GVv0BohitNW" />
+  </UXView>
+  <TextPool>
+    <base:TextBlock language="EN" masterLanguage="true" currentLanguage="true" />
+  </TextPool>
+</UXComponent>

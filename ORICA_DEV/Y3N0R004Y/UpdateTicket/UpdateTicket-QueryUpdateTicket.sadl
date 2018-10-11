@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sadl:definition xmlns:ass="http://sap.com/sap.nw.f.sadl/association" date="20180927" time="155903" uuid="16D861B192234F9DAD0D63201FA0F07D" xmlns:sadl="http://sap.com/sap.nw.f.sadl">
+  <sadl:conversions>
+    <sadl:conversion type="ALPHA" />
+  </sadl:conversions>
+  <sadl:modes>
+    <sadl:mode type="QUERY" />
+  </sadl:modes>
+  <sadl:dataSource name="DS" binding="Y3N0R004Y_UPET29C824A2B63E6223/ass:ROOT4F903855210031B0" type="BusinessObjectNode" d2p1:mdrsBinding="UpdateTicket.Root" xmlns:d2p1="http://sap.com/xi/AP/PDI" />
+  <sadl:resultSet>
+    <sadl:structure name="Y3N0R004Y_UPET29C824A2B63E6223" dataSource="DS" d3p1:mdrsName="UpdateTicket.Root" xmlns:d3p1="http://sap.com/xi/AP/PDI">
+      <sadl:attribute name="Y3N0R004Y_IDOT469924C86F9445F3" binding="ID5B6AA03D69E6EFEB" d3p1:mdrsName="ID" />
+    </sadl:structure>
+  </sadl:resultSet>
+  <sadl:query bo="Y3N0R004Y_UPET29C824A2B63E6223" name="QUERY_BY_ELEMENTS" node="QUERYUICKETEE363C13CE2B3B18" type="ESI_QUERY">
+    <sadl:inputStructure>
+      <sadl:inputParameter name="IDROOT5B57ADF3C76011D1">
+        <sadl:attribute binding="Y3N0R004Y_IDOT469924C86F9445F3" />
+      </sadl:inputParameter>
+    </sadl:inputStructure>
+    <sadl:outputStructure>
+      <sadl:attribute name="IDROOT5B57ADF3C76011D1" binding="Y3N0R004Y_IDOT469924C86F9445F3" />
+    </sadl:outputStructure>
+  </sadl:query>
+</sadl:definition>

@@ -1,0 +1,62 @@
+﻿/*
+	Developer : Shiddalingesh.Akki
+	Functional Specs ID : I-1787
+*/
+
+import ABSL;
+import AP.FO.Activity.Global;
+import AP.Common.Global;
+import AP.PC.ActivityManagement.Global;
+
+//Activity: Root node
+var elActivityRoot : elementsof Activity;
+var instActivity;
+
+// Activity: define party node
+var elActivityParty : elementsof Activity.Party;
+var instParty;
+
+var toRoot;
+if (this.ToParent.IsSet())
+	toRoot = this.ToParent;
+
+// Activity: maintain Business Object type - mandatory (12 = Appointment; 39 = Email; 86 = Phonecall; 542 = Task)
+elActivityRoot.TypeCode = "542"; // create Task
+
+// Activity: maintain description - mandatory
+elActivityRoot.SubjectName = this.ZName.content;
+
+
+// Activity: create new instance 
+instActivity = Activity.Create(elActivityRoot);
+
+// Activity: set Processor
+if (!instActivity.ProcessorParty.IsSet())
+{
+	elActivityParty.PartyName = this.ZTask_EmpResp_ID.content;
+	instActivity.ProcessorParty.Create(elActivityParty);
+}
+
+// Activity: Set Employee Responsible  mandatory
+if (instActivity.EmployeeResponsibleParty.IsSet())
+	instActivity.EmployeeResponsibleParty.PartyName = this.ZTask_EmpResp_ID.content;
+
+//Activity: Account or Customer from Ticket
+if (!toRoot.ZAccountID.IsInitial())
+{
+	if (!instActivity.MainActivityParty.IsSet())
+		instActivity.MainActivityParty.Create();
+ 
+	instActivity.MainActivityParty.PartyName = toRoot.ZAccountID;
+}  
+
+
+// Activity: Contact party
+//if (!this.ToRoot.ZContact_ID.IsInitial()){
+//if(!instActivity.MainContactParty.IsSet())
+//instActivity.MainContactParty.Create();
+//instActivity.MainContactParty.PartyName = this.ToRoot.ZContact_ID;
+//}
+
+this.ZTaskID = instActivity.ID;
+this.ZTaskUUID.content = instActivity.UUID;

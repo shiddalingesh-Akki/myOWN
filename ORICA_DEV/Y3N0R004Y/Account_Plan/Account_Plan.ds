@@ -1,0 +1,1368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://sap.com/xi/BASIS/Global">
+  <ProxyName xmlns="">Y3N0R004Y_QVDB03Y7TZM2TX</ProxyName>
+  <QueryDefintionXrepPath xmlns="">/Y3N0R004Y_MAIN/SRC/Account_Plan/Account_Plan.sadl</QueryDefintionXrepPath>
+  <Description xmlns="">Account Plan Data Source</Description>
+  <AnalyticalQueryIndicator xmlns="">true</AnalyticalQueryIndicator>
+  <SensitiveQueryIndicator xmlns="">false</SensitiveQueryIndicator>
+  <LanguageCode xmlns="">EN</LanguageCode>
+  <ParentNodeProxyName xmlns="">ROOT4F903855210031B0</ParentNodeProxyName>
+  <BOProxyName xmlns="">Y3N0R004Y_ACANDE2C1EB1AE557E60</BOProxyName>
+  <LogReferenceFields xmlns="">false</LogReferenceFields>
+  <MdavAnnotationElements xmlns="">
+    <ProxyName>Y3N0R004Y_8SFCA2JFH9KABJ</ProxyName>
+    <UiText>
+      <ProxyName>ACCOUNUITEXT9714A2464E9639CE</ProxyName>
+      <ShortText>Account_Plan</ShortText>
+      <ColumnHeaderText>Account_Plan</ColumnHeaderText>
+      <ToolTipText>Account_Plan</ToolTipText>
+      <HelpText>Account Plan Data Source</HelpText>
+    </UiText>
+    <AccessControlListIndicator>false</AccessControlListIndicator>
+    <Reference>
+      <ReferenceAllowed>false</ReferenceAllowed>
+    </Reference>
+    <ViewElementElements>
+      <ProxyName>ZPRVSYESROOT85183B0525A58DE4</ProxyName>
+      <QueryDefinitionElementProxyName>ZPRVSYESROOT85183B0525A58DE4</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZPRVSYESROOT85183B0525A58DE4</ProxyName>
+        <ShortText>ZPrvsYear_ProductSales</ShortText>
+        <ColumnHeaderText>ZPrvsYear_ProductSales</ColumnHeaderText>
+        <ToolTipText>ZPrvsYear_ProductSales</ToolTipText>
+        <HelpText>ZPrvsYear_ProductSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZPRVSYESROOTFB62FDC60F2F4E61</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTYMEROOTD3593295113B6957</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTYMEROOTD3593295113B6957</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTYMEROOTD3593295113B6957</ProxyName>
+        <ShortText>ZCrntYTD_BulkVolume</ShortText>
+        <ColumnHeaderText>ZCrntYTD_BulkVolume</ColumnHeaderText>
+        <ToolTipText>ZCrntYTD_BulkVolume</ToolTipText>
+        <HelpText>ZCrntYTD_BulkVolume</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCRNTYMEROOTD547EA46D35FB687</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTBESROOTAA6D2573B1DB4F90</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTBESROOTAA6D2573B1DB4F90</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTBESROOTAA6D2573B1DB4F90</ProxyName>
+        <ShortText>ZCrntBgt_Sales</ShortText>
+        <ColumnHeaderText>ZCrntBgt_Sales</ColumnHeaderText>
+        <ToolTipText>ZCrntBgt_Sales</ToolTipText>
+        <HelpText>ZCrntBgt_Sales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCRNTBESROOTCCD51DA2DD371CB0</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTBESROOTC00BAEA4979DE6E2</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTBESROOTC00BAEA4979DE6E2</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTBESROOTC00BAEA4979DE6E2</ProxyName>
+        <ShortText>CrntBgt BulkSales - currencyCode</ShortText>
+        <ColumnHeaderText>CrntBgt BulkSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CrntBgt BulkSales - currencyCode</ToolTipText>
+        <HelpText>CrntBgt BulkSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZPRVSYESROOT06C1B2E6FB9EE2F6</ProxyName>
+      <QueryDefinitionElementProxyName>ZPRVSYESROOT06C1B2E6FB9EE2F6</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZPRVSYESROOT06C1B2E6FB9EE2F6</ProxyName>
+        <ShortText>PrvsYear Sales - currencyCode</ShortText>
+        <ColumnHeaderText>PrvsYear Sales - currencyCode</ColumnHeaderText>
+        <ToolTipText>PrvsYear Sales - currencyCode</ToolTipText>
+        <HelpText>PrvsYear Sales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZPRVSYESROOT5874C6D90928A7F0</ProxyName>
+      <QueryDefinitionElementProxyName>ZPRVSYESROOT5874C6D90928A7F0</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZPRVSYESROOT5874C6D90928A7F0</ProxyName>
+        <ShortText>ZPrvsYear_InitiatedSystemSales</ShortText>
+        <ColumnHeaderText>ZPrvsYear_InitiatedSystemSales</ColumnHeaderText>
+        <ToolTipText>ZPrvsYear_InitiatedSystemSales</ToolTipText>
+        <HelpText>ZPrvsYear_InitiatedSystemSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZPRVSYESROOT86400B37CFF046D2</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZPRVSYESROOT218AE8BBDDF3CED3</ProxyName>
+      <QueryDefinitionElementProxyName>ZPRVSYESROOT218AE8BBDDF3CED3</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZPRVSYESROOT218AE8BBDDF3CED3</ProxyName>
+        <ShortText>ZPrvsYear_BulkSales</ShortText>
+        <ColumnHeaderText>ZPrvsYear_BulkSales</ColumnHeaderText>
+        <ToolTipText>ZPrvsYear_BulkSales</ToolTipText>
+        <HelpText>ZPrvsYear_BulkSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZPRVSYESROOT979D8870CF071319</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCMPY_ESROOT9CBEB786651B76A8</ProxyName>
+      <QueryDefinitionElementProxyName>ZCMPY_ESROOT9CBEB786651B76A8</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCMPY_ESROOT9CBEB786651B76A8</ProxyName>
+        <ShortText>ZCMPY_Sales</ShortText>
+        <ColumnHeaderText>ZCMPY_Sales</ColumnHeaderText>
+        <ToolTipText>ZCMPY_Sales</ToolTipText>
+        <HelpText>ZCMPY_Sales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCMPY_ESROOT7D322AD573AF370C</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTBESROOT33A898FBBAE982E2</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTBESROOT33A898FBBAE982E2</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTBESROOT33A898FBBAE982E2</ProxyName>
+        <ShortText>CrntBgt GroundSupportSales - currencyCode</ShortText>
+        <ColumnHeaderText>CrntBgt GroundSupportSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CrntBgt GroundSupportSales - currencyCode</ToolTipText>
+        <HelpText>CrntBgt GroundSupportSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTYESROOT8C6327EE754D1AD2</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTYESROOT8C6327EE754D1AD2</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTYESROOT8C6327EE754D1AD2</ProxyName>
+        <ShortText>ZCrntYTD_GroundSupportSales</ShortText>
+        <ColumnHeaderText>ZCrntYTD_GroundSupportSales</ColumnHeaderText>
+        <ToolTipText>ZCrntYTD_GroundSupportSales</ToolTipText>
+        <HelpText>ZCrntYTD_GroundSupportSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCRNTYESROOTFBF73F4222F823C2</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTBESROOTCCD51DA2DD371CB0</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTBESROOTCCD51DA2DD371CB0</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTBESROOTCCD51DA2DD371CB0</ProxyName>
+        <ShortText>CrntBgt Sales - currencyCode</ShortText>
+        <ColumnHeaderText>CrntBgt Sales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CrntBgt Sales - currencyCode</ToolTipText>
+        <HelpText>CrntBgt Sales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCMPY_MEROOTE2D4F72A94FE837E</ProxyName>
+      <QueryDefinitionElementProxyName>ZCMPY_MEROOTE2D4F72A94FE837E</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCMPY_MEROOTE2D4F72A94FE837E</ProxyName>
+        <ShortText>ZCMPY_BulkVolume</ShortText>
+        <ColumnHeaderText>ZCMPY_BulkVolume</ColumnHeaderText>
+        <ToolTipText>ZCMPY_BulkVolume</ToolTipText>
+        <HelpText>ZCMPY_BulkVolume</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCMPY_MEROOT8511CD1FDA0BC769</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTYESROOTFBF73F4222F823C2</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTYESROOTFBF73F4222F823C2</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTYESROOTFBF73F4222F823C2</ProxyName>
+        <ShortText>CrntYTD GroundSupportSales - currencyCode</ShortText>
+        <ColumnHeaderText>CrntYTD GroundSupportSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CrntYTD GroundSupportSales - currencyCode</ToolTipText>
+        <HelpText>CrntYTD GroundSupportSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTBESROOT8F5B14038D258DFE</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTBESROOT8F5B14038D258DFE</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTBESROOT8F5B14038D258DFE</ProxyName>
+        <ShortText>ZCrntBgt_ProductSales</ShortText>
+        <ColumnHeaderText>ZCrntBgt_ProductSales</ColumnHeaderText>
+        <ToolTipText>ZCrntBgt_ProductSales</ToolTipText>
+        <HelpText>ZCrntBgt_ProductSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCRNTBESROOT33ABD99ED3E37AB5</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCMPY_ESROOT46CCB3C8919017AC</ProxyName>
+      <QueryDefinitionElementProxyName>ZCMPY_ESROOT46CCB3C8919017AC</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCMPY_ESROOT46CCB3C8919017AC</ProxyName>
+        <ShortText>ZCMPY_GroundSupportSales</ShortText>
+        <ColumnHeaderText>ZCMPY_GroundSupportSales</ColumnHeaderText>
+        <ToolTipText>ZCMPY_GroundSupportSales</ToolTipText>
+        <HelpText>ZCMPY_GroundSupportSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCMPY_ESROOTBB845A1A8422F9BA</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCMPY_ESROOT9FBF2168670FE4F7</ProxyName>
+      <QueryDefinitionElementProxyName>ZCMPY_ESROOT9FBF2168670FE4F7</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCMPY_ESROOT9FBF2168670FE4F7</ProxyName>
+        <ShortText>CMPY ProductSales - currencyCode</ShortText>
+        <ColumnHeaderText>CMPY ProductSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CMPY ProductSales - currencyCode</ToolTipText>
+        <HelpText>CMPY ProductSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTBESROOT19F9C7CF78CF718F</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTBESROOT19F9C7CF78CF718F</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTBESROOT19F9C7CF78CF718F</ProxyName>
+        <ShortText>ZCrntBgt_InitiatedSystemSales</ShortText>
+        <ColumnHeaderText>ZCrntBgt_InitiatedSystemSales</ColumnHeaderText>
+        <ToolTipText>ZCrntBgt_InitiatedSystemSales</ToolTipText>
+        <HelpText>ZCrntBgt_InitiatedSystemSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCRNTBESROOTC244F3F6C99DA24C</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTBESROOTA224F361F88DF5DB</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTBESROOTA224F361F88DF5DB</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTBESROOTA224F361F88DF5DB</ProxyName>
+        <ShortText>CrntBgt PackagedSales - currencyCode</ShortText>
+        <ColumnHeaderText>CrntBgt PackagedSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CrntBgt PackagedSales - currencyCode</ToolTipText>
+        <HelpText>CrntBgt PackagedSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTYESROOT6D4856789F2D522E</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTYESROOT6D4856789F2D522E</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTYESROOT6D4856789F2D522E</ProxyName>
+        <ShortText>ZCrntYTD_ProductSales</ShortText>
+        <ColumnHeaderText>ZCrntYTD_ProductSales</ColumnHeaderText>
+        <ToolTipText>ZCrntYTD_ProductSales</ToolTipText>
+        <HelpText>ZCrntYTD_ProductSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCRNTYESROOT9E1F09FD9094DC70</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTBESROOT66EDF713C976BFAE</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTBESROOT66EDF713C976BFAE</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTBESROOT66EDF713C976BFAE</ProxyName>
+        <ShortText>ZCrntBgt_BulkSales</ShortText>
+        <ColumnHeaderText>ZCrntBgt_BulkSales</ColumnHeaderText>
+        <ToolTipText>ZCrntBgt_BulkSales</ToolTipText>
+        <HelpText>ZCrntBgt_BulkSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCRNTBESROOTC00BAEA4979DE6E2</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCMPY_ESROOT08462AE328F970E1</ProxyName>
+      <QueryDefinitionElementProxyName>ZCMPY_ESROOT08462AE328F970E1</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCMPY_ESROOT08462AE328F970E1</ProxyName>
+        <ShortText>CMPY InitiatedSystemSales - currencyCode</ShortText>
+        <ColumnHeaderText>CMPY InitiatedSystemSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CMPY InitiatedSystemSales - currencyCode</ToolTipText>
+        <HelpText>CMPY InitiatedSystemSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTYESROOT94187059E58490F6</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTYESROOT94187059E58490F6</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTYESROOT94187059E58490F6</ProxyName>
+        <ShortText>CrntYTD BulkSales - currencyCode</ShortText>
+        <ColumnHeaderText>CrntYTD BulkSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CrntYTD BulkSales - currencyCode</ToolTipText>
+        <HelpText>CrntYTD BulkSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCUSTOGYROOT72C2CF9E1C762358</ProxyName>
+      <QueryDefinitionElementProxyName>ZCUSTOGYROOT72C2CF9E1C762358</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCUSTOGYROOT72C2CF9E1C762358</ProxyName>
+        <ShortText>Customer Strategy - Language Code</ShortText>
+        <ColumnHeaderText>Customer Strategy - Language Code</ColumnHeaderText>
+        <ToolTipText>Customer Strategy - Language Code</ToolTipText>
+        <HelpText>Customer Strategy - Language Code</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTBESROOT64C4BDB364665B35</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTBESROOT64C4BDB364665B35</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTBESROOT64C4BDB364665B35</ProxyName>
+        <ShortText>CrntBgt ServiceSales - currencyCode</ShortText>
+        <ColumnHeaderText>CrntBgt ServiceSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CrntBgt ServiceSales - currencyCode</ToolTipText>
+        <HelpText>CrntBgt ServiceSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCMPY_ESROOT7862A3A5EE2C4CB5</ProxyName>
+      <QueryDefinitionElementProxyName>ZCMPY_ESROOT7862A3A5EE2C4CB5</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCMPY_ESROOT7862A3A5EE2C4CB5</ProxyName>
+        <ShortText>CMPY BulkSales - currencyCode</ShortText>
+        <ColumnHeaderText>CMPY BulkSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CMPY BulkSales - currencyCode</ToolTipText>
+        <HelpText>CMPY BulkSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZPRVSYMEROOT93C6B778515149CB</ProxyName>
+      <QueryDefinitionElementProxyName>ZPRVSYMEROOT93C6B778515149CB</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZPRVSYMEROOT93C6B778515149CB</ProxyName>
+        <ShortText>PrvsYear BulkVolume - currencyCode</ShortText>
+        <ColumnHeaderText>PrvsYear BulkVolume - currencyCode</ColumnHeaderText>
+        <ToolTipText>PrvsYear BulkVolume - currencyCode</ToolTipText>
+        <HelpText>PrvsYear BulkVolume - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTYMEROOTD547EA46D35FB687</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTYMEROOTD547EA46D35FB687</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTYMEROOTD547EA46D35FB687</ProxyName>
+        <ShortText>CrntYTD BulkVolume - currencyCode</ShortText>
+        <ColumnHeaderText>CrntYTD BulkVolume - currencyCode</ColumnHeaderText>
+        <ToolTipText>CrntYTD BulkVolume - currencyCode</ToolTipText>
+        <HelpText>CrntYTD BulkVolume - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCMPY_ESROOTFC0CEA12637F3DDD</ProxyName>
+      <QueryDefinitionElementProxyName>ZCMPY_ESROOTFC0CEA12637F3DDD</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCMPY_ESROOTFC0CEA12637F3DDD</ProxyName>
+        <ShortText>CMPY PackagedSales - currencyCode</ShortText>
+        <ColumnHeaderText>CMPY PackagedSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CMPY PackagedSales - currencyCode</ToolTipText>
+        <HelpText>CMPY PackagedSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZPRVSYESROOTFB62FDC60F2F4E61</ProxyName>
+      <QueryDefinitionElementProxyName>ZPRVSYESROOTFB62FDC60F2F4E61</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZPRVSYESROOTFB62FDC60F2F4E61</ProxyName>
+        <ShortText>PrvsYear ProductSales - currencyCode</ShortText>
+        <ColumnHeaderText>PrvsYear ProductSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>PrvsYear ProductSales - currencyCode</ToolTipText>
+        <HelpText>PrvsYear ProductSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTYESROOT1845C0936A868C57</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTYESROOT1845C0936A868C57</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTYESROOT1845C0936A868C57</ProxyName>
+        <ShortText>ZCrntYTD_ServiceSales</ShortText>
+        <ColumnHeaderText>ZCrntYTD_ServiceSales</ColumnHeaderText>
+        <ToolTipText>ZCrntYTD_ServiceSales</ToolTipText>
+        <HelpText>ZCrntYTD_ServiceSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCRNTYESROOT1038E3D02C570EFB</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCMPY_ESROOT7DA832D74A20F009</ProxyName>
+      <QueryDefinitionElementProxyName>ZCMPY_ESROOT7DA832D74A20F009</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCMPY_ESROOT7DA832D74A20F009</ProxyName>
+        <ShortText>ZCMPY_ServiceSales</ShortText>
+        <ColumnHeaderText>ZCMPY_ServiceSales</ColumnHeaderText>
+        <ToolTipText>ZCMPY_ServiceSales</ToolTipText>
+        <HelpText>ZCMPY_ServiceSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCMPY_ESROOT60528B289E5BC9C3</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZPRVSYESROOT632B56216E26C5B3</ProxyName>
+      <QueryDefinitionElementProxyName>ZPRVSYESROOT632B56216E26C5B3</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZPRVSYESROOT632B56216E26C5B3</ProxyName>
+        <ShortText>PrvsYear PackagedSales - currencyCode</ShortText>
+        <ColumnHeaderText>PrvsYear PackagedSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>PrvsYear PackagedSales - currencyCode</ToolTipText>
+        <HelpText>PrvsYear PackagedSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZAPPROUSROOT201F4F51E18574D4</ProxyName>
+      <QueryDefinitionElementProxyName>ZAPPROUSROOT201F4F51E18574D4</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZAPPROUSROOT201F4F51E18574D4</ProxyName>
+        <ShortText>Approval Status</ShortText>
+        <ColumnHeaderText>Approval Status</ColumnHeaderText>
+        <ToolTipText>Approval Status</ToolTipText>
+        <HelpText>Approval Status</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCMPY_ESROOTBB845A1A8422F9BA</ProxyName>
+      <QueryDefinitionElementProxyName>ZCMPY_ESROOTBB845A1A8422F9BA</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCMPY_ESROOTBB845A1A8422F9BA</ProxyName>
+        <ShortText>CMPY GroundSupportSales - currencyCode</ShortText>
+        <ColumnHeaderText>CMPY GroundSupportSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CMPY GroundSupportSales - currencyCode</ToolTipText>
+        <HelpText>CMPY GroundSupportSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCUSTOGYROOT0337E32E6BC5487C</ProxyName>
+      <QueryDefinitionElementProxyName>ZCUSTOGYROOT0337E32E6BC5487C</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCUSTOGYROOT0337E32E6BC5487C</ProxyName>
+        <ShortText>Customer Strategy</ShortText>
+        <ColumnHeaderText>Customer Strategy</ColumnHeaderText>
+        <ToolTipText>Customer Strategy</ToolTipText>
+        <HelpText>Customer Strategy</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCMPY_MEROOT8511CD1FDA0BC769</ProxyName>
+      <QueryDefinitionElementProxyName>ZCMPY_MEROOT8511CD1FDA0BC769</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCMPY_MEROOT8511CD1FDA0BC769</ProxyName>
+        <ShortText>CMPY BulkVolume - currencyCode</ShortText>
+        <ColumnHeaderText>CMPY BulkVolume - currencyCode</ColumnHeaderText>
+        <ToolTipText>CMPY BulkVolume - currencyCode</ToolTipText>
+        <HelpText>CMPY BulkVolume - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTBESROOT34D769BE69FB9BF2</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTBESROOT34D769BE69FB9BF2</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTBESROOT34D769BE69FB9BF2</ProxyName>
+        <ShortText>ZCrntBgt_GroundSupportSales</ShortText>
+        <ColumnHeaderText>ZCrntBgt_GroundSupportSales</ColumnHeaderText>
+        <ToolTipText>ZCrntBgt_GroundSupportSales</ToolTipText>
+        <HelpText>ZCrntBgt_GroundSupportSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCRNTBESROOT33A898FBBAE982E2</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZPRVSYESROOTFD921EF4D281B79F</ProxyName>
+      <QueryDefinitionElementProxyName>ZPRVSYESROOTFD921EF4D281B79F</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZPRVSYESROOTFD921EF4D281B79F</ProxyName>
+        <ShortText>ZPrvsYear_ServiceSales</ShortText>
+        <ColumnHeaderText>ZPrvsYear_ServiceSales</ColumnHeaderText>
+        <ToolTipText>ZPrvsYear_ServiceSales</ToolTipText>
+        <HelpText>ZPrvsYear_ServiceSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZPRVSYESROOTBE88C6C3479C37B4</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTYESROOTBBC2A738B27638C3</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTYESROOTBBC2A738B27638C3</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTYESROOTBBC2A738B27638C3</ProxyName>
+        <ShortText>ZCrntYTD_Sales</ShortText>
+        <ColumnHeaderText>ZCrntYTD_Sales</ColumnHeaderText>
+        <ToolTipText>ZCrntYTD_Sales</ToolTipText>
+        <HelpText>ZCrntYTD_Sales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCRNTYESROOT875FA9B809264A7F</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZPRVSYMEROOT3CDC39726B44433F</ProxyName>
+      <QueryDefinitionElementProxyName>ZPRVSYMEROOT3CDC39726B44433F</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZPRVSYMEROOT3CDC39726B44433F</ProxyName>
+        <ShortText>ZPrvsYear_BulkVolume</ShortText>
+        <ColumnHeaderText>ZPrvsYear_BulkVolume</ColumnHeaderText>
+        <ToolTipText>ZPrvsYear_BulkVolume</ToolTipText>
+        <HelpText>ZPrvsYear_BulkVolume</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZPRVSYMEROOT93C6B778515149CB</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTYESROOT1A1A742F928F1B0D</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTYESROOT1A1A742F928F1B0D</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTYESROOT1A1A742F928F1B0D</ProxyName>
+        <ShortText>CrntYTD PackagedSales - currencyCode</ShortText>
+        <ColumnHeaderText>CrntYTD PackagedSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CrntYTD PackagedSales - currencyCode</ToolTipText>
+        <HelpText>CrntYTD PackagedSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCMPY_ESROOT7D322AD573AF370C</ProxyName>
+      <QueryDefinitionElementProxyName>ZCMPY_ESROOT7D322AD573AF370C</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCMPY_ESROOT7D322AD573AF370C</ProxyName>
+        <ShortText>CMPY Sales - currencyCode</ShortText>
+        <ColumnHeaderText>CMPY Sales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CMPY Sales - currencyCode</ToolTipText>
+        <HelpText>CMPY Sales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTYESROOT1038E3D02C570EFB</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTYESROOT1038E3D02C570EFB</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTYESROOT1038E3D02C570EFB</ProxyName>
+        <ShortText>CrntYTD ServiceSales - currencyCode</ShortText>
+        <ColumnHeaderText>CrntYTD ServiceSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CrntYTD ServiceSales - currencyCode</ToolTipText>
+        <HelpText>CrntYTD ServiceSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCMPY_ESROOTC0166165B4E0BE6A</ProxyName>
+      <QueryDefinitionElementProxyName>ZCMPY_ESROOTC0166165B4E0BE6A</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCMPY_ESROOTC0166165B4E0BE6A</ProxyName>
+        <ShortText>ZCMPY_BulkSales</ShortText>
+        <ColumnHeaderText>ZCMPY_BulkSales</ColumnHeaderText>
+        <ToolTipText>ZCMPY_BulkSales</ToolTipText>
+        <HelpText>ZCMPY_BulkSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCMPY_ESROOT7862A3A5EE2C4CB5</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTBESROOT33ABD99ED3E37AB5</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTBESROOT33ABD99ED3E37AB5</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTBESROOT33ABD99ED3E37AB5</ProxyName>
+        <ShortText>CrntBgt ProductSales - currencyCode</ShortText>
+        <ColumnHeaderText>CrntBgt ProductSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CrntBgt ProductSales - currencyCode</ToolTipText>
+        <HelpText>CrntBgt ProductSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTBESROOT7561B1447A2A73FB</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTBESROOT7561B1447A2A73FB</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTBESROOT7561B1447A2A73FB</ProxyName>
+        <ShortText>ZCrntBgt_ServiceSales</ShortText>
+        <ColumnHeaderText>ZCrntBgt_ServiceSales</ColumnHeaderText>
+        <ToolTipText>ZCrntBgt_ServiceSales</ToolTipText>
+        <HelpText>ZCrntBgt_ServiceSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCRNTBESROOT64C4BDB364665B35</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZACCOUIDROOTD9B990A2EC437C0F</ProxyName>
+      <QueryDefinitionElementProxyName>ZACCOUIDROOTD9B990A2EC437C0F</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZACCOUIDROOTD9B990A2EC437C0F</ProxyName>
+        <ShortText>Account ID</ShortText>
+        <ColumnHeaderText>Account ID</ColumnHeaderText>
+        <ToolTipText>Account ID</ToolTipText>
+        <HelpText>Account ID</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>true</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTYESROOT42E47C9AEB752A10</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTYESROOT42E47C9AEB752A10</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTYESROOT42E47C9AEB752A10</ProxyName>
+        <ShortText>ZCrntYTD_BulkSales</ShortText>
+        <ColumnHeaderText>ZCrntYTD_BulkSales</ColumnHeaderText>
+        <ToolTipText>ZCrntYTD_BulkSales</ToolTipText>
+        <HelpText>ZCrntYTD_BulkSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCRNTYESROOT94187059E58490F6</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZPRVSYESROOT3EBFC6621B83C8D6</ProxyName>
+      <QueryDefinitionElementProxyName>ZPRVSYESROOT3EBFC6621B83C8D6</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZPRVSYESROOT3EBFC6621B83C8D6</ProxyName>
+        <ShortText>ZPrvsYear_PackagedSales</ShortText>
+        <ColumnHeaderText>ZPrvsYear_PackagedSales</ColumnHeaderText>
+        <ToolTipText>ZPrvsYear_PackagedSales</ToolTipText>
+        <HelpText>ZPrvsYear_PackagedSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZPRVSYESROOT632B56216E26C5B3</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCMPY_ESROOT6F70B87253D1EC38</ProxyName>
+      <QueryDefinitionElementProxyName>ZCMPY_ESROOT6F70B87253D1EC38</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCMPY_ESROOT6F70B87253D1EC38</ProxyName>
+        <ShortText>ZCMPY_ProductSales</ShortText>
+        <ColumnHeaderText>ZCMPY_ProductSales</ColumnHeaderText>
+        <ToolTipText>ZCMPY_ProductSales</ToolTipText>
+        <HelpText>ZCMPY_ProductSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCMPY_ESROOT9FBF2168670FE4F7</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZACCOUGYROOT083BDFCC7C6505BC</ProxyName>
+      <QueryDefinitionElementProxyName>ZACCOUGYROOT083BDFCC7C6505BC</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZACCOUGYROOT083BDFCC7C6505BC</ProxyName>
+        <ShortText>Account Strategy - Language Code</ShortText>
+        <ColumnHeaderText>Account Strategy - Language Code</ColumnHeaderText>
+        <ToolTipText>Account Strategy - Language Code</ToolTipText>
+        <HelpText>Account Strategy - Language Code</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTYESROOTFB669AAE7ADDC6DD</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTYESROOTFB669AAE7ADDC6DD</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTYESROOTFB669AAE7ADDC6DD</ProxyName>
+        <ShortText>ZCrntYTD_PackagedSales</ShortText>
+        <ColumnHeaderText>ZCrntYTD_PackagedSales</ColumnHeaderText>
+        <ToolTipText>ZCrntYTD_PackagedSales</ToolTipText>
+        <HelpText>ZCrntYTD_PackagedSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCRNTYESROOT1A1A742F928F1B0D</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTBMEROOT766FD5D2C692A018</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTBMEROOT766FD5D2C692A018</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTBMEROOT766FD5D2C692A018</ProxyName>
+        <ShortText>ZCrntBgt_BulkVolume</ShortText>
+        <ColumnHeaderText>ZCrntBgt_BulkVolume</ColumnHeaderText>
+        <ToolTipText>ZCrntBgt_BulkVolume</ToolTipText>
+        <HelpText>ZCrntBgt_BulkVolume</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCRNTBMEROOT2261FC747FB29251</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZPRVSYESROOT3A716959DF8297F2</ProxyName>
+      <QueryDefinitionElementProxyName>ZPRVSYESROOT3A716959DF8297F2</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZPRVSYESROOT3A716959DF8297F2</ProxyName>
+        <ShortText>ZPrvsYear_GroundSupportSales</ShortText>
+        <ColumnHeaderText>ZPrvsYear_GroundSupportSales</ColumnHeaderText>
+        <ToolTipText>ZPrvsYear_GroundSupportSales</ToolTipText>
+        <HelpText>ZPrvsYear_GroundSupportSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZPRVSYESROOTA4C460518C8B0333</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZPRVSYESROOT0585FB8E71D2DC68</ProxyName>
+      <QueryDefinitionElementProxyName>ZPRVSYESROOT0585FB8E71D2DC68</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZPRVSYESROOT0585FB8E71D2DC68</ProxyName>
+        <ShortText>ZPrvsYear_Sales</ShortText>
+        <ColumnHeaderText>ZPrvsYear_Sales</ColumnHeaderText>
+        <ToolTipText>ZPrvsYear_Sales</ToolTipText>
+        <HelpText>ZPrvsYear_Sales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZPRVSYESROOT06C1B2E6FB9EE2F6</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTYESROOT875FA9B809264A7F</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTYESROOT875FA9B809264A7F</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTYESROOT875FA9B809264A7F</ProxyName>
+        <ShortText>CrntYTD Sales - currencyCode</ShortText>
+        <ColumnHeaderText>CrntYTD Sales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CrntYTD Sales - currencyCode</ToolTipText>
+        <HelpText>CrntYTD Sales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTBMEROOT2261FC747FB29251</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTBMEROOT2261FC747FB29251</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTBMEROOT2261FC747FB29251</ProxyName>
+        <ShortText>CrntBgt BulkVolume - currencyCode</ShortText>
+        <ColumnHeaderText>CrntBgt BulkVolume - currencyCode</ColumnHeaderText>
+        <ToolTipText>CrntBgt BulkVolume - currencyCode</ToolTipText>
+        <HelpText>CrntBgt BulkVolume - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTBESROOT0F3C78842C0FD42F</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTBESROOT0F3C78842C0FD42F</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTBESROOT0F3C78842C0FD42F</ProxyName>
+        <ShortText>ZCrntBgt_PackagedSales</ShortText>
+        <ColumnHeaderText>ZCrntBgt_PackagedSales</ColumnHeaderText>
+        <ToolTipText>ZCrntBgt_PackagedSales</ToolTipText>
+        <HelpText>ZCrntBgt_PackagedSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCRNTBESROOTA224F361F88DF5DB</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZPRVSYESROOTA4C460518C8B0333</ProxyName>
+      <QueryDefinitionElementProxyName>ZPRVSYESROOTA4C460518C8B0333</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZPRVSYESROOTA4C460518C8B0333</ProxyName>
+        <ShortText>PrvsYear GroundSupportSales - currencyCode</ShortText>
+        <ColumnHeaderText>PrvsYear GroundSupportSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>PrvsYear GroundSupportSales - currencyCode</ToolTipText>
+        <HelpText>PrvsYear GroundSupportSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTYESROOT9E1F09FD9094DC70</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTYESROOT9E1F09FD9094DC70</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTYESROOT9E1F09FD9094DC70</ProxyName>
+        <ShortText>CrntYTD ProductSales - currencyCode</ShortText>
+        <ColumnHeaderText>CrntYTD ProductSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CrntYTD ProductSales - currencyCode</ToolTipText>
+        <HelpText>CrntYTD ProductSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZACCOUGYROOTBB1D4FE2803A113A</ProxyName>
+      <QueryDefinitionElementProxyName>ZACCOUGYROOTBB1D4FE2803A113A</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZACCOUGYROOTBB1D4FE2803A113A</ProxyName>
+        <ShortText>Account Strategy</ShortText>
+        <ColumnHeaderText>Account Strategy</ColumnHeaderText>
+        <ToolTipText>Account Strategy</ToolTipText>
+        <HelpText>Account Strategy</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZPRVSYESROOT979D8870CF071319</ProxyName>
+      <QueryDefinitionElementProxyName>ZPRVSYESROOT979D8870CF071319</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZPRVSYESROOT979D8870CF071319</ProxyName>
+        <ShortText>PrvsYear BulkSales currencyCode</ShortText>
+        <ColumnHeaderText>PrvsYear BulkSales currencyCode</ColumnHeaderText>
+        <ToolTipText>PrvsYear BulkSales currencyCode</ToolTipText>
+        <HelpText>PrvsYear BulkSales currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTBESROOTC244F3F6C99DA24C</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTBESROOTC244F3F6C99DA24C</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTBESROOTC244F3F6C99DA24C</ProxyName>
+        <ShortText>CrntBgt InitiatedSystemSales - currencyCode</ShortText>
+        <ColumnHeaderText>CrntBgt InitiatedSystemSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CrntBgt InitiatedSystemSales - currencyCode</ToolTipText>
+        <HelpText>CrntBgt InitiatedSystemSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTYESROOT1A31F02E4F0B4180</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTYESROOT1A31F02E4F0B4180</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTYESROOT1A31F02E4F0B4180</ProxyName>
+        <ShortText>ZCrntYTD_InitiatedSystemSales</ShortText>
+        <ColumnHeaderText>ZCrntYTD_InitiatedSystemSales</ColumnHeaderText>
+        <ToolTipText>ZCrntYTD_InitiatedSystemSales</ToolTipText>
+        <HelpText>ZCrntYTD_InitiatedSystemSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCRNTYESROOT1D6E14CBED537229</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCMPY_ESROOT60528B289E5BC9C3</ProxyName>
+      <QueryDefinitionElementProxyName>ZCMPY_ESROOT60528B289E5BC9C3</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCMPY_ESROOT60528B289E5BC9C3</ProxyName>
+        <ShortText>CMPY ServiceSales - currencyCode</ShortText>
+        <ColumnHeaderText>CMPY ServiceSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CMPY ServiceSales - currencyCode</ToolTipText>
+        <HelpText>CMPY ServiceSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCMPY_ESROOTBEA0B445D6E4A446</ProxyName>
+      <QueryDefinitionElementProxyName>ZCMPY_ESROOTBEA0B445D6E4A446</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCMPY_ESROOTBEA0B445D6E4A446</ProxyName>
+        <ShortText>ZCMPY_InitiatedSystemSales</ShortText>
+        <ColumnHeaderText>ZCMPY_InitiatedSystemSales</ColumnHeaderText>
+        <ToolTipText>ZCMPY_InitiatedSystemSales</ToolTipText>
+        <HelpText>ZCMPY_InitiatedSystemSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCMPY_ESROOT08462AE328F970E1</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCMPY_ESROOT3C851818AE1AAD52</ProxyName>
+      <QueryDefinitionElementProxyName>ZCMPY_ESROOT3C851818AE1AAD52</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>2</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCMPY_ESROOT3C851818AE1AAD52</ProxyName>
+        <ShortText>ZCMPY_PackagedSales</ShortText>
+        <ColumnHeaderText>ZCMPY_PackagedSales</ColumnHeaderText>
+        <ToolTipText>ZCMPY_PackagedSales</ToolTipText>
+        <HelpText>ZCMPY_PackagedSales</HelpText>
+      </UiText>
+      <KeyFigure>
+        <AggregationTypeCode>1</AggregationTypeCode>
+        <DateKeyFigure>false</DateKeyFigure>
+        <UnitCharacteristicReferenceProxyName>ZCMPY_ESROOTFC0CEA12637F3DDD</UnitCharacteristicReferenceProxyName>
+      </KeyFigure>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZPRVSYESROOTBE88C6C3479C37B4</ProxyName>
+      <QueryDefinitionElementProxyName>ZPRVSYESROOTBE88C6C3479C37B4</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZPRVSYESROOTBE88C6C3479C37B4</ProxyName>
+        <ShortText>PrvsYear ServiceSales - currencyCode</ShortText>
+        <ColumnHeaderText>PrvsYear ServiceSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>PrvsYear ServiceSales - currencyCode</ToolTipText>
+        <HelpText>PrvsYear ServiceSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZPRVSYESROOT86400B37CFF046D2</ProxyName>
+      <QueryDefinitionElementProxyName>ZPRVSYESROOT86400B37CFF046D2</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZPRVSYESROOT86400B37CFF046D2</ProxyName>
+        <ShortText>PrvsYear InitiatedSystemSales - currencyCode</ShortText>
+        <ColumnHeaderText>PrvsYear InitiatedSystemSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>PrvsYear InitiatedSystemSales - currencyCode</ToolTipText>
+        <HelpText>PrvsYear InitiatedSystemSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZCRNTYESROOT1D6E14CBED537229</ProxyName>
+      <QueryDefinitionElementProxyName>ZCRNTYESROOT1D6E14CBED537229</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZCRNTYESROOT1D6E14CBED537229</ProxyName>
+        <ShortText>CrntYTD InitiatedSystemSales - currencyCode</ShortText>
+        <ColumnHeaderText>CrntYTD InitiatedSystemSales - currencyCode</ColumnHeaderText>
+        <ToolTipText>CrntYTD InitiatedSystemSales - currencyCode</ToolTipText>
+        <HelpText>CrntYTD InitiatedSystemSales - currencyCode</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+  </MdavAnnotationElements>
+</QueryDefinition>

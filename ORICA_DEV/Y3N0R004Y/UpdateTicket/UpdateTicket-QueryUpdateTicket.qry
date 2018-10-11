@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://sap.com/xi/BASIS/Global">
+  <ProxyName xmlns="">Y3N0R004Y_RCXQCMYA6ZBRMI</ProxyName>
+  <QueryDefintionXrepPath xmlns="">/Y3N0R004Y_MAIN/SRC/UpdateTicket/UpdateTicket-QueryUpdateTicket.sadl</QueryDefintionXrepPath>
+  <Description xmlns="" />
+  <AnalyticalQueryIndicator xmlns="">false</AnalyticalQueryIndicator>
+  <SensitiveQueryIndicator xmlns="">false</SensitiveQueryIndicator>
+  <LanguageCode xmlns="">EN</LanguageCode>
+  <ParentNodeProxyName xmlns="">ROOT4F903855210031B0</ParentNodeProxyName>
+  <BOProxyName xmlns="">Y3N0R004Y_UPET29C824A2B63E6223</BOProxyName>
+  <LogReferenceFields xmlns="">false</LogReferenceFields>
+  <QueryAnnotationElements xmlns="">
+    <QueryInputParameters>
+      <ProxyName>IDROOT5B57ADF3C76011D1</ProxyName>
+      <Name>ID</Name>
+      <Type>PDI_ABSL_IDENTIFIER</Type>
+      <BindingInformation>
+        <BOProxyName xmlns="http://sap.com/xi/BASIS/Global">Y3N0R004Y_UPET29C824A2B63E6223</BOProxyName>
+        <BONodeProxyName xmlns="http://sap.com/xi/BASIS/Global">ROOT4F903855210031B0</BONodeProxyName>
+        <BONodeElementProxyName xmlns="http://sap.com/xi/BASIS/Global">ID5B6AA03D69E6EFEB</BONodeElementProxyName>
+      </BindingInformation>
+    </QueryInputParameters>
+    <QueryQRTNElements>
+      <ProxyName>IDROOT5B57ADF3C76011D1</ProxyName>
+      <Name>ID</Name>
+      <Type>PDI_ABSL_IDENTIFIER</Type>
+      <BindingInformation>
+        <BOProxyName xmlns="http://sap.com/xi/BASIS/Global">Y3N0R004Y_UPET29C824A2B63E6223</BOProxyName>
+        <BONodeProxyName xmlns="http://sap.com/xi/BASIS/Global">ROOT4F903855210031B0</BONodeProxyName>
+        <BONodeElementProxyName xmlns="http://sap.com/xi/BASIS/Global">ID5B6AA03D69E6EFEB</BONodeElementProxyName>
+      </BindingInformation>
+    </QueryQRTNElements>
+    <ParentNodeProxyName>ROOT4F903855210031B0</ParentNodeProxyName>
+    <UseForFeedsIndicator>false</UseForFeedsIndicator>
+    <UseForEnterpriseSearchIndicator>false</UseForEnterpriseSearchIndicator>
+  </QueryAnnotationElements>
+</QueryDefinition>

@@ -1,0 +1,133 @@
+﻿/*
+  	Developer : Shiddalingesh.Akki
+	Functional Specs ID : E-1912  
+*/
+
+import ABSL;
+import AP.CRM.Global;
+import AP.FO.Activity.Global;
+import AP.PC.ActivityManagement.Global;
+import BASIS.Global as BasisGlobal;
+import A1S.ReuseFunctions;
+
+
+
+// Query Service Request BO
+var SRquery = ServiceRequest.QueryByElements;
+// Selection
+var SRselectionParams = SRquery.CreateSelectionParams();
+//Query All Ticket with ServiceIssueCategoryID as Performance (CA_1) as survey is only for this
+SRselectionParams.Add(SRquery.ServiceTermsServiceIssueCategoryCatalogueCategoryKey.ServiceIssueCategoryID.content, "I", "EQ", "CA_1");
+SRselectionParams.Add(SRquery.ServiceTermsServiceRequestUserLifeCycleStatusCode, "I", "EQ", "Z8");
+// Result
+var SRresultData = SRquery.Execute(SRselectionParams);//All Performance Tickets
+  
+
+foreach (var Ticket_1 in SRresultData)
+{
+
+	//If ticket status is Closed Pending Feedback - Z8
+	if (Ticket_1.ServiceTerms.ServiceRequestUserLifeCycleStatusCode == "Z8")
+	{
+
+  
+		var valQuery = Questionnaire.ValuationCollection.QueryByElements;
+		var valParam = valQuery.CreateSelectionParams();
+		valParam.Add(valQuery.ServiceRequestUUID.content, "I", "EQ", Ticket_1.UUID.content);
+		var valResults = valQuery.Execute(valParam);
+
+		foreach (var result in valResults)
+		{
+
+			foreach (var valu in result.Valuation)
+			{
+
+				foreach (var question in valu.ValuationQuestionValuation)
+				{
+
+					// Questions
+
+					if (question.Element.IsSet())
+					{
+
+						//Update Ticket Status : Z8 = Closed Pending Feedback, Z6 = Closed With Feedback
+						Ticket_1.ServiceTerms.ServiceRequestUserLifeCycleStatusCode = "Z6";
+
+					   
+						//Overall performance Question (OrdinalNumberValue=5) && Score lessthan acceptable (ScoreValue < 4)
+						if (question.Element.OrdinalNumberValue == 5 && question.ElementValue.ScoreValue < 4)
+						{
+					   
+							var elActivityRoot : elementsof Activity;
+           
+							// Activity: define party node
+							var elActivityParty : elementsof Activity.Party;
+           
+							// Activity: maintain Business Object type - mandatory (12 = Appointment; 39 = Email; 86 = Phonecall; 542 = Task)
+							elActivityRoot.TypeCode = "542"; // create Task
+
+							// Activity: maintain description - mandatory
+							var Sub1 = "Overall Experience less than acceptable for Case ".Concatenate(Ticket_1.ID.content.RemoveLeadingZeros());
+							var Sub2 = Sub1.Concatenate(" - ");
+							var Sub3 = Sub2.Concatenate(Ticket_1.Name.content);
+							elActivityRoot.SubjectName = Sub3;
+
+							// Activity: create new instance 
+							var instActivity = Activity.Create(elActivityRoot);
+
+							//Start and End date
+							var STDateTime : LOCAL_DateTime;
+							STDateTime = Context.GetCurrentSystemDateTime();
+							var STDateTime_G = STDateTime.ConvertToGlobalDateTime();
+							var STDateTime_LocalNormalized = STDateTime_G.ConvertToLocalNormalisedDateTime();
+							instActivity.ScheduledStartDateTime = STDateTime_LocalNormalized;
+						   
+							var ENDDateTime_G = STDateTime_G.AddDuration(Library::Duration.ParseFromString("P7D"));
+							var ENDDateTime_LocalNormalized = ENDDateTime_G.ConvertToLocalNormalisedDateTime();
+							instActivity.ScheduledEndDateTime = ENDDateTime_LocalNormalized;
+
+							// Activity: set Processor
+							if (!instActivity.ProcessorParty.IsSet() && Ticket_1.ProcessorParty.IsSet()) 
+								instActivity.ProcessorParty.PartyName = Ticket_1.ProcessorParty.PartyKey.PartyID.content;
+
+							// Activity: Set Employee Responsible  mandatory
+							if (!instActivity.EmployeeResponsibleParty.IsSet() && Ticket_1.ProcessorParty.IsSet())
+								instActivity.EmployeeResponsibleParty.PartyName = Ticket_1.ProcessorParty.PartyKey.PartyID.content;
+
+				   
+
+							//Activity: Account or Customer from Ticket
+							if (Ticket_1.BuyerParty.IsSet())
+							{
+
+								if (!instActivity.MainActivityParty.IsSet())
+									instActivity.MainActivityParty.Create();
+						   
+								instActivity.MainActivityParty.PartyUUID = Ticket_1.BuyerParty.PartyUUID.content;
+							}  
+
+
+							// Activity: Contact party
+							if (Ticket_1.BuyerParty.MainPartyContactParty.IsSet())
+							{
+
+								if (!instActivity.MainContactParty.IsSet())
+									instActivity.MainContactParty.Create();
+							 
+								instActivity.MainContactParty.PartyUUID = Ticket_1.BuyerParty.MainPartyContactParty.PartyUUID.content;
+							}
+						   
+
+						} 
+
+					} // if Question is set
+
+				} //foreach question in valu.ValuationQuestionValuation
+   
+			} // foreach valu in result.valuation
+
+		} //foreach result in valResults 
+   
+	} //If ticket status is Closed Pending Feedback - Z8
+}  //foreach Ticket_1 in SRresultData
+ 

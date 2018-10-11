@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:tns="http://orica.com/SalesOrderSearch/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    name="SalesOrderSearch" targetNamespace="http://orica.com/SalesOrderSearch/">
+    
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://orica.com/SalesOrderSearch/">
+            <xsd:element name="SalesOrderSearchRequestMessage">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="CustomerId" type="xsd:string"/>                       
+                    
+                        <xsd:element minOccurs="0" maxOccurs="1" name="SalesOrderId" type="xsd:string"/>                       
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            
+            <xsd:element name="SalesOrderSearchResponseMessage">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="S4Response" nillable="true" type="tns:S4Response"/> 
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="Error" nillable="true" type="tns:ErrorMessage"/> 
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+                        
+            <xsd:complexType name="S4Response">
+                <xsd:sequence>
+                 <xsd:element maxOccurs="unbounded" minOccurs="0" name="Header" nillable="true" type="tns:SalesOrderHeaders"/> 
+                 <xsd:element maxOccurs="unbounded" minOccurs="0" name="Item" nillable="true" type="tns:SalesOrderItems"/> 
+                </xsd:sequence>                
+            </xsd:complexType>
+			 <xsd:complexType name="SalesOrderHeaders">
+                <xsd:sequence>
+					<xsd:element name="DocNumber" type="xsd:string"/>
+					<xsd:element name="DocType " type="xsd:string"/>
+					<xsd:element name="SalesOrg" type="xsd:string"/>
+					<xsd:element name="DistrChan" type="xsd:string"/>
+					<xsd:element name="Division" type="xsd:string"/>
+					<xsd:element name="PurchNo" type="xsd:string"/>
+					<xsd:element name="CreatedBy" type="xsd:string"/>
+					<xsd:element name="SoldTo" type="xsd:string"/>
+					<xsd:element name="SoldToNameFirst" type="xsd:string"/>
+				 </xsd:sequence>       
+				</xsd:complexType>
+			 <xsd:complexType name="SalesOrderItems">
+               <xsd:sequence>
+					<xsd:element name="DocNumber" type="xsd:string"/>
+					<xsd:element name="ItemNumber" type="xsd:string"/>
+					<xsd:element name="Material" type="xsd:string"/>
+					<xsd:element name="PurchNo" type="xsd:string"/>
+					<xsd:element name="ShortText" type="xsd:string"/>
+					<xsd:element name="TBasUnit" type="xsd:string"/>
+					<xsd:element name="NetValue" type="xsd:string"/>
+					<xsd:element name="Currency" type="xsd:string"/>
+					<xsd:element name="Quantity" type="xsd:decimal"/>
+					<xsd:element name="DeliveryStat" type="xsd:string"/>
+					<xsd:element name="OverallStat" type="xsd:string"/>
+					<xsd:element name="PricingDate" type="xsd:string"/>
+					<xsd:element name="BillingDate" type="xsd:string"/>
+				</xsd:sequence>           
+            </xsd:complexType>
+
+            <xsd:complexType name="ErrorMessage">
+                <xsd:sequence>
+                    <xsd:element name="ErrorMessage" minOccurs="1" maxOccurs="1" type="xsd:string"/>
+                </xsd:sequence>                
+            </xsd:complexType>
+
+        </xsd:schema>
+    </wsdl:types>    
+    
+    <wsdl:message name="NewOperationRequest">
+        <wsdl:part element="tns:SalesOrderSearchRequestMessage" name="parameters"/>
+    </wsdl:message>
+    <wsdl:message name="NewOperationResponse">
+        <wsdl:part element="tns:SalesOrderSearchResponseMessage" name="parameters"/>
+    </wsdl:message>    
+    <wsdl:portType name="SalesOrderSearch">
+        <wsdl:operation name="Search">
+            <wsdl:input message="tns:NewOperationRequest"/>
+            <wsdl:output message="tns:NewOperationResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>    
+    <wsdl:binding name="SalesOrderSearchSOAP" type="tns:SalesOrderSearch">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Search">
+            <soap:operation soapAction="http://orica.com/SalesOrderSearch"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>    
+    <wsdl:service name="SalesOrderSearch">
+        <wsdl:port binding="tns:SalesOrderSearchSOAP" name="SalesOrderSearchSOAP">
+            <soap:address location="https://e0967-iflmap.hcisbt.us2.hana.ondemand.com/cxf/C4C/S4/SalesOrderSearch"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>   

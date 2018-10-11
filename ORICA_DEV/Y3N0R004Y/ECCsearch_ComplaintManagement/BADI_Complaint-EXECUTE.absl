@@ -1,0 +1,96 @@
+﻿/*
+  	Developer : Shiddalingesh.Akki
+	Functional Specs ID : I-0174 and I-1806
+*/
+import AP.CRM.Global;
+import ABSL;
+import A1S.ReuseFunctions;
+import AP.Common.GDT as apCommonGDT;
+
+var input : ComplaintManagementSalesOrderQueryInput;
+var result : ComplaintManagementSalesOrderQueryResult;
+
+var Request : ComplaintSO_ExtWebService.Search.Request;
+var Response : ComplaintSO_ExtWebService.Search.Response;
+
+var Result_tab : ComplaintManagementSalesOrderSearchResult;
+var Result_Header : collectionof ComplaintManagementSalesOrderQueryResult.SalesOrderSearchResultTab.SalesOrderHeader;
+var Result_Item : collectionof ComplaintManagementSalesOrderQueryResult.SalesOrderSearchResultTab.SalesOrderItem;
+
+var Result_Header_1 : ConplaintManagementSalesOrderTransformedObjectRootElements;
+var Result_Item_1 : ComplaintManagementSalesOrderTransformedObjectItemElements;
+
+
+Request.CustomerId = InputData.SalesOrderSearchQueryTab.GetFirst().CustomerID;
+Request.SalesOrderId = InputData.SalesOrderSearchQueryTab.GetFirst().SalesOrderID.content;
+
+Response = ComplaintSO_ExtWebService.Search(Request, "", "ComplaintSO_Scenario");
+
+foreach (var Response_S4_1 in Response.S4Response)
+{
+
+	foreach (var Response_Header_1 in Response_S4_1.Header)
+	{
+
+		Result_Header_1.CreatedBy = Response_Header_1.CreatedBy;
+		Result_Header_1.CreatedByName = Response_Header_1.CreatedBy;
+		Result_Header_1.CustomerID = Response_Header_1.SoldTo;
+		//Result_Header_1.CustomerInternalID = Response_Header_1.SoldTo;
+		Result_Header_1.DistributionChannel = Response_Header_1.DistrChan;
+		Result_Header_1.Division = Response_Header_1.Division;
+		//Result_Header_1.IncoTerms1 = Response_Header_1.
+		//Result_Header_1.IncoTerms2 = Response_Header_1.
+		//Result_Header_1.OrderDescription = Response_Header_1.
+		Result_Header_1.OrderType = Response_Header_1.DocType;
+		//Result_Header_1.PaymentTerms = Response_Header_1.
+		//Result_Header_1.ProductID = Response_Header_1.
+		//Result_Header_1.PurchaseOrderDate = Response_Header_1.;
+		Result_Header_1.PurchaseOrderID.content = Response_Header_1.PurchNo;
+		Result_Header_1.SalesOrderID.content = Response_Header_1.DocNumber;
+		Result_Header_1.SalesOrg = Response_Header_1.SalesOrg;
+		Result_Header_1.SoldToID = Response_Header_1.SoldTo;
+		Result_Header_1.SoldToName = Response_Header_1.SoldToNameFirst;
+  
+		Result_Header.Add(Result_Header_1);  
+
+	} //Header loop
+
+	foreach (var Response_Item_1 in Response_S4_1.Item)
+	{
+		Result_Item_1.BilledQuantity.content = Response_Item_1.Quantity;
+		Result_Item_1.BillingDate = ABSL:Date.ParseFromString(Response_Item_1.BillingDate);    //date
+		Result_Item_1.Currency = Response_Item_1.Currency;
+		//Result_Item_1.CustomerMaterialNumber = Response_Item_1.Material;
+		Result_Item_1.DeliveryStatus = Response_Item_1.DeliveryStat;
+		//Result_Item_1.GrossWeight = Response_Item_1.;
+		//Result_Item_1.ISOUoM = Response_Item_1.;
+		//Result_Item_1.ItemCategory = Response_Item_1.;
+		Result_Item_1.NetValue.content = ABSL:Numeric.ParseFromString(Response_Item_1.NetValue); //Numeric
+		//Result_Item_1.NetWeight = Response_Item_1.;
+		Result_Item_1.OverallStatus = Response_Item_1.OverallStat;
+		Result_Item_1.PricingDate = ABSL:Date.ParseFromString(Response_Item_1.PricingDate);
+		Result_Item_1.ProductDescription.content = Response_Item_1.ShortText;
+		Result_Item_1.ProductID.content = Response_Item_1.Material;
+		//Result_Item_1.ProductInternalID = Response_Item_1.;
+		Result_Item_1.SalesOrderID.content = Response_Item_1.DocNumber;
+		Result_Item_1.SalesOrderItemID = Response_Item_1.ItemNumber;
+		//Result_Item_1.Tax = Response_Item_1.;
+		Result_Item_1.UOM = Response_Item_1.TBasUnit;
+		//Result_Item_1.Volume = Response_Item_1.;
+		//Result_Item_1.VolumeUOM = Response_Item_1.;
+		//Result_Item_1.WeightUOM = Response_Item_1.;
+
+		Result_Item.Add(Result_Item_1);
+   
+	} //Item loop
+
+	Result_tab.SalesOrderItem.Add(Result_Item); 
+ 
+	Result_tab.SalesOrderHeader.Add(Result_Header);
+  
+} //Response loop
+
+
+result.SalesOrderSearchResultTab.Add(Result_tab);
+
+return result;

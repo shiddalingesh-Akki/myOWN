@@ -1,0 +1,32 @@
+﻿/*
+Developer : Shiddalingesh.Akki
+Functional Specs ID : E-0979
+*/
+
+import ABSL;
+import AP.FO.BusinessPartner.Global;
+
+var BupaUITra;
+var ParentACC;
+var CurrCommon;
+
+if (this.BupaUiTransformation.IsSet())
+{
+	BupaUITra = this.BupaUiTransformation;
+	if (BupaUITra.ParentAccount.IsSet())
+		ParentACC = BupaUITra.ParentAccount;
+}
+
+if (this.CurrentCommon.IsSet())
+	CurrCommon = this.CurrentCommon;
+
+//Logic to determine Key Account
+if (!ParentACC.TopLevelAccountUUID.content.IsInitial() && ParentACC.ParentAccountUUID.content.IsInitial())
+{	
+    
+	if (CurrCommon.IsSet())
+		CurrCommon.AccountIndicator = true;
+}
+else
+	CurrCommon.AccountIndicator = false;
+

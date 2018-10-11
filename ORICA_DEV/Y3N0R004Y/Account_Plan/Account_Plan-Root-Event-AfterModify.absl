@@ -1,0 +1,30 @@
+﻿/*
+Developer : Shiddalingesh.Akki
+Functional Specs ID : E-0979
+*/
+
+import ABSL;
+import AP.FO.BusinessPartner.Global;
+
+
+
+//Query Customer
+if(!this.ZAccountID.IsInitial())
+{  
+  var CustQuery = Customer.QueryByIdentification;
+  // 2. Selection
+  var CustSelectionParams = CustQuery.CreateSelectionParams();
+  CustSelectionParams.Add(CustQuery.InternalID, "I", "EQ", this.ZAccountID);
+  // Result
+  var CustResultData = CustQuery.Execute(CustSelectionParams);
+  
+  var CustRes;
+  if (CustResultData.GetFirst().IsSet())
+  CustRes = CustResultData.GetFirst();
+
+  if(this.ToCustomer.IsSet())
+  this.ToCustomer = CustRes; // Association
+
+  if(CustRes.CurrentCommon.IsSet())
+  CustRes.CurrentCommon.AccountPlanStatus = this.ZApprovalStatus;
+} 

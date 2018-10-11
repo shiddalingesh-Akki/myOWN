@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://sap.com/xi/BASIS/Global">
+  <ProxyName xmlns="">Y3N0R004Y_MUVPYB4YCXEHHC</ProxyName>
+  <QueryDefintionXrepPath xmlns="">/Y3N0R004Y_MAIN/SRC/Opportunity_AribaContract/OpportunityProfile/OpportunityProfile.sadl</QueryDefintionXrepPath>
+  <Description xmlns="">Opportunity profiles of all Opportunties</Description>
+  <AnalyticalQueryIndicator xmlns="">true</AnalyticalQueryIndicator>
+  <SensitiveQueryIndicator xmlns="">false</SensitiveQueryIndicator>
+  <LanguageCode xmlns="">EN</LanguageCode>
+  <ParentNodeProxyName xmlns="">Y3N0R004Y_Z88D873C19FC80149</ParentNodeProxyName>
+  <BOProxyName xmlns="">OPPORTUNITY</BOProxyName>
+  <LogReferenceFields xmlns="">false</LogReferenceFields>
+  <MdavAnnotationElements xmlns="">
+    <ProxyName>Y3N0R004Y_BEDCDOWKZU7PZY</ProxyName>
+    <UiText>
+      <ProxyName>OPPORTUITEXT1DD830287EC9FB0F</ProxyName>
+      <ShortText>OpportunityProfile</ShortText>
+      <ColumnHeaderText>OpportunityProfile</ColumnHeaderText>
+      <ToolTipText>OpportunityProfile</ToolTipText>
+      <HelpText>Opportunity profiles of all Opportunties</HelpText>
+    </UiText>
+    <AccessControlListIndicator>true</AccessControlListIndicator>
+    <Reference>
+      <ReferenceAllowed>false</ReferenceAllowed>
+    </Reference>
+    <ViewElementElements>
+      <ProxyName>ZNEEDSROFILE1A63FDF402C8909B</ProxyName>
+      <QueryDefinitionElementProxyName>ZNEEDSROFILE1A63FDF402C8909B</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZNEEDSROFILE1A63FDF402C8909B</ProxyName>
+        <ShortText>Needs</ShortText>
+        <ColumnHeaderText>Needs</ColumnHeaderText>
+        <ToolTipText>Needs</ToolTipText>
+        <HelpText>Needs</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>IDCONTROFILEE20207C3E63E0BD8</ProxyName>
+      <QueryDefinitionElementProxyName>IDCONTROFILEE20207C3E63E0BD8</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>IDCONTROFILEE20207C3E63E0BD8</ProxyName>
+        <ShortText>ID</ShortText>
+        <ColumnHeaderText>ID</ColumnHeaderText>
+        <ToolTipText>ID</ToolTipText>
+        <HelpText>ID</HelpText>
+      </UiText>
+      <MdavReferenceProxyName>
+        <MDAVRefProxyName>CODOPPH</MDAVRefProxyName>
+        <MDAVRefKeyCharacteristicProxyName>DOC_ID</MDAVRefKeyCharacteristicProxyName>
+      </MdavReferenceProxyName>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>true</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZKPIZOROFILE632C3DB50FB8D234</ProxyName>
+      <QueryDefinitionElementProxyName>ZKPIZOROFILE632C3DB50FB8D234</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZKPIZOROFILE632C3DB50FB8D234</ProxyName>
+        <ShortText>KPI</ShortText>
+        <ColumnHeaderText>KPI</ColumnHeaderText>
+        <ToolTipText>KPI</ToolTipText>
+        <HelpText>KPI</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+    <ViewElementElements>
+      <ProxyName>ZVALUEROFILEF61D35967553E0BA</ProxyName>
+      <QueryDefinitionElementProxyName>ZVALUEROFILEF61D35967553E0BA</QueryDefinitionElementProxyName>
+      <ViewElementTypeCode>1</ViewElementTypeCode>
+      <UiText>
+        <ProxyName>ZVALUEROFILEF61D35967553E0BA</ProxyName>
+        <ShortText>Value Drivers</ShortText>
+        <ColumnHeaderText>Value Drivers</ColumnHeaderText>
+        <ToolTipText>Value Drivers</ToolTipText>
+        <HelpText>Value Drivers</HelpText>
+      </UiText>
+      <Characteristic>
+        <ValueSelectionTypeCode>1</ValueSelectionTypeCode>
+        <IsKeyIndicator>false</IsKeyIndicator>
+        <KeyType>1</KeyType>
+        <UserInterfaceDisplayTypeCode>1</UserInterfaceDisplayTypeCode>
+        <ValueHelpSequence>0</ValueHelpSequence>
+        <MasterDataBONEInd>false</MasterDataBONEInd>
+        <HasDateKeyFigure>false</HasDateKeyFigure>
+      </Characteristic>
+    </ViewElementElements>
+  </MdavAnnotationElements>
+</QueryDefinition>
